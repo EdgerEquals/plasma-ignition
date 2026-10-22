@@ -1,4 +1,4 @@
-"""Rev B PRS circuit model: netlist builders + ngspice batch runner.
+"""Rev B Plasma Ignition circuit model: netlist builders + ngspice batch runner.
 
 All component values come from PRS_RevB_architecture_proposal.md (Rev B, 18 Oct 2026)
 unless marked ASSUMED. See RevB_simulation_report.md for the reasoning.
@@ -163,7 +163,7 @@ def netlist(p, blocks="full"):
     Cs01 = p["C0a"]*p["C1"]*n*n/(p["C0a"]+p["C1"]*n*n)
     Lleak = (p["t_xfmr"]/math.pi)**2/Cs01
     ic = p.get("ic", {})            # v2: initial state for multi-shot runs (residual C1..C3, C_block, L_sec)
-    s = [f"* PRS Rev B  blocks={blocks}  model={p['model']}"]
+    s = [f"* Plasma Ignition Rev B  blocks={blocks}  model={p['model']}"]
     s.append(".options method=gear reltol=1e-4 abstol=1e-9 vntol=1e-4 itl4=200 maxord=2")
     if blocks in ("full", "stage1"):
         s += [f"C0a a0 0 {p['C0a']:g} IC={p['V0a']:g}",

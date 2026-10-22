@@ -1,4 +1,4 @@
-# PRS Rev B: circuit simulation report
+# Plasma Ignition Rev B: circuit simulation report
 
 Danny's working file, 18 Oct 2026. Not for Vikas, and not sent. Every number below comes from a simulation run on the box, or from the Rev B proposal (`../PRS_RevB_architecture_proposal.md`) where it is labelled "hand". The simulations are lumped-element models with assumed core models. They are not measurements.
 

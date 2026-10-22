@@ -1,4 +1,4 @@
-"""Multi-pass case runner + metric extraction for the Rev B PRS model."""
+"""Multi-pass case runner + metric extraction for the Rev B Plasma Ignition model."""
 import numpy as np, prs_model as m
 
 def cumtrapz(y, t):

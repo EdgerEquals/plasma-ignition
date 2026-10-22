@@ -1,4 +1,4 @@
-* PRS Rev B  blocks=stage2  model=eddy
+* Plasma Ignition Rev B  blocks=stage2  model=eddy
 .options method=gear reltol=1e-4 abstol=1e-9 vntol=1e-4 itl4=200 maxord=2
 C0b bk 0 6.25e-08 IC=4000
 C_plug P 0 1.5e-11 IC=4000

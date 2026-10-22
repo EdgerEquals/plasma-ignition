@@ -1,4 +1,4 @@
-# PRS: revised architecture proposal (Rev B)
+# Plasma Ignition: revised architecture proposal (Rev B)
 
 Danny's working document, 18 Oct 2026. Not for Vikas, and not sent. All values are first-pass engineering estimates (*derived*), not measurements.
 

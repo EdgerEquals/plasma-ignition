@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Rev B PRS v2 follow-up modelling (resumable; checkpoints to results/v2_checkpoint.jsonl).
+"""Rev B Plasma Ignition v2 follow-up modelling (resumable; checkpoints to results/v2_checkpoint.jsonl).
 
     python3 run_v2.py [--items 1,2,3] [--fresh] [--plots-only]
     (also: python3 run_all.py --v2)

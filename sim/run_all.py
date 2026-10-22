@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Rev B PRS circuit simulation - reproducible driver.
+"""Rev B Plasma Ignition circuit simulation - reproducible driver.
 
     python3 run_all.py            # everything (ngspice + LTspice/Wine cross-check)
     python3 run_all.py --no-lt    # skip LTspice cross-check

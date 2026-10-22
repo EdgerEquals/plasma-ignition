@@ -1,4 +1,4 @@
-* PRS Rev B  blocks=full  model=eddy
+* Plasma Ignition Rev B  blocks=full  model=eddy
 .options method=gear reltol=1e-4 abstol=1e-9 vntol=1e-4 itl4=200 maxord=2
 C0a a0 0 9.6e-08 IC=1100
 D_igbt a0 a1 DSW
