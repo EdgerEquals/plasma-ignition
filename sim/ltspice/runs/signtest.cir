@@ -1,0 +1,10 @@
+* sign test
+.include Core_Model_recentred.sub
+.model D D
+V1 a 0 PWL(0 0 1n 4000)
+R1 a m 1
+X1 al bb m 0 fl hh ib irc Core_Model_RC Ae=8e-4 Le=0.22 k1=5e-5 k2=10.87 k3=8 Gamma=0.21 Lc=1n R=8900 C=17.9p Nw=6 Bc=0.99
+.tran 0 3u 0 1n uic
+.save V(bb) V(fl) V(hh) I(R1) V(al)
+.options method=gear
+.end

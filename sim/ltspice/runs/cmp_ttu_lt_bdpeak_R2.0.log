@@ -1,0 +1,23 @@
+LTspice 26.1.1 for Windows
+Circuit: Z:\workspace\prs\sim\ltspice\runs\cmp_ttu_lt_bdpeak_R2.0.cir
+Start Time: Sun Oct 18 22:55:32 2026
+Options:method=gear reltol=1e-4 abstol=1e-9 vntol=1e-4 itl4=200
+solver = Normal
+Maximum thread count: 8
+tnom = 27
+temp = 27
+method = Gear
+abstol = 1e-09
+reltol = 0.0001
+volttol = 0.0001
+AsciiRawFile = true
+ERROR: Node n2 is floating and connected to current source B_SR1
+
+Per .tran options, skipping operating point for transient analysis.
+Total elapsed time: 48.437 seconds.
+Total iterations: 4743697
+
+Files loaded:
+Z:\workspace\prs\sim\ltspice\runs\cmp_ttu_lt_bdpeak_R2.0.cir
+Z:\workspace\prs\sim\ltspice\runs\Core_Model_recentred.sub
+

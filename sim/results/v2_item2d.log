@@ -1,0 +1,8 @@
+  v2f2fc_4C65_N4_25x80_f1_Sw20                 ok=True Vgap=-24.4kV edge=25.1 e5090=10.0 pre=0.0
+  v2f2fc_4C65_N12_25x80_f1_Sw20                ok=True Vgap=-28.0kV edge=29.8 e5090=12.9 pre=0.0
+  v2f2fc_4C65_N16_25x80_f1_Sw20                ok=True Vgap=-28.5kV edge=32.9 e5090=15.0 pre=0.0
+  v2f2fc_4B1_N12_25x80_f1_Sw20                 ok=True Vgap=-25.7kV edge=36.1 e5090=17.4 pre=0.0
+  v2f2fc_CMD5005_N16_25x80_f1_Sw20             ok=True Vgap=-39.7kV edge=21.8 e5090=2.0 pre=-6.1
+  v2f2fc_gen_mu2000_N12_25x80_f1_Sw5           ok=True Vgap=-44.1kV edge=8.6 e5090=1.6 pre=-1.9
+  v2f2fc_gen_mu5000_N12_25x80_f1_Sw10          ok=True Vgap=-42.4kV edge=16.1 e5090=1.6 pre=-3.6
+  v2f2fc_gen_mu5000_N8_25x80_f1_Sw5            ok=True Vgap=-43.1kV edge=13.8 e5090=1.3 pre=-3.1

@@ -1,0 +1,25 @@
+* inter-shot recovery
+L_sec n1 nw 0.961 IC=-0.0637849
+R_w nw 0 20
+C1 n1 0 1e-10 IC=-5090.56
+C2 n2 0 1e-10 IC=-5275.53
+C3 n3 0 1e-10 IC=-5287.2
+L1 n2 m1 8.1e-05
+R1 m1 n1 1
+L2 n3 m2 3.2e-06
+R2 m2 n2 1
+L3 x m3 1e-08
+R3 m3 n3 1
+R_bleed n3 0 1e+07
+C_block x P 1e-09 IC=-5353.47
+V_P P 0 4000
+.options method=gear reltol=1e-5
+.control
+set wr_singlescale
+set wr_vecnames
+option numdgt=9
+tran 2.4929e-06 4.985756e-03 0 1.2464e-06 uic
+wrdata /workspace/prs/sim/out/v2c_lossless_xfmr_200Hz_burst_r2.dat v(n1) v(n2) v(n3) v(x) i(L_sec)
+quit
+.endc
+.end

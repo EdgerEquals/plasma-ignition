@@ -1,0 +1,73 @@
+{
+ "JA": {
+  "MS": 720000.0,
+  "A": 4,
+  "K": 3,
+  "C": 0.05,
+  "ALPHA": 3.5e-06
+ },
+ "results": [
+  {
+   "R": 0.5,
+   "C0b": 6.25e-08,
+   "B_at_bias": -0.8501850688158077,
+   "dB_avail_used": 1.810353306518459,
+   "delay": 2.1267900000000142e-06,
+   "frac_first_half": 0.541135466680634,
+   "Ipk": 1563.6192,
+   "reversal": 0.7197042025,
+   "E_ch_total": 0.4573560803760148,
+   "Imag_delay_median": 2.30077732
+  },
+  {
+   "R": 1.0,
+   "C0b": 6.25e-08,
+   "B_at_bias": -0.8501850688158077,
+   "dB_avail_used": 1.8025672389595284,
+   "delay": 2.1276080000000254e-06,
+   "frac_first_half": 0.8023781101682478,
+   "Ipk": 1342.20137,
+   "reversal": 0.5090386275000001,
+   "E_ch_total": 0.48641609615331005,
+   "Imag_delay_median": 2.300723005
+  },
+  {
+   "R": 2.0,
+   "C0b": 6.25e-08,
+   "B_at_bias": -0.8501850688158077,
+   "dB_avail_used": 1.7918517870833934,
+   "delay": 2.1288930000000136e-06,
+   "frac_first_half": 0.9843444077544405,
+   "Ipk": 1038.59874,
+   "reversal": 0.27212551,
+   "E_ch_total": 0.505180372940955,
+   "Imag_delay_median": 2.30072728
+  },
+  {
+   "R": 1.0,
+   "C0b": 6.25e-08,
+   "B_at_bias": -0.8501850688158077,
+   "dB_avail_used": 0.8417193978900263,
+   "delay": 1.2884050000000133e-06,
+   "note": "SRiso saturated but no current zero (channel open)",
+   "Ipk": 193.49242,
+   "Vnode_max_after": 34001.4537,
+   "case": "quench +1us no re-break",
+   "Vnode_max_after_quench": 34001.4537,
+   "t_cross_2k1_after_quench_ns": 16.280000000024813
+  },
+  {
+   "R": 1.0,
+   "C0b": 6.25e-08,
+   "B_at_bias": -0.8501850688158077,
+   "dB_avail_used": 1.8025663147445048,
+   "delay": 2.132108000000015e-06,
+   "frac_first_half": 0.8024260163507231,
+   "Ipk": 1342.14604,
+   "reversal": 0.5090205624999999,
+   "E_ch_total": 0.4864142444036672,
+   "Imag_delay_median": 2.29729676,
+   "case": "quench +1us, re-break 2.1 kV"
+  }
+ ]
+}

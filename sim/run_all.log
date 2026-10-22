@@ -1,0 +1,94 @@
+== 1. block validation
+== 2/3. full chain: baseline
+  base_bd27k5_C625_R0.5                      ok=True delay=2.37110163888119e-06 3.3s 
+  base_bd27k5_C625_R1.0                      ok=True delay=2.371118959402127e-06 3.3s 
+  base_bd27k5_C625_R2.0                      ok=True delay=2.371436984814595e-06 3.3s 
+  base_bd27k5_C1250_R0.5                     ok=True delay=2.3603043205286245e-06 3.1s 
+  base_bd27k5_C1250_R1.0                     ok=True delay=2.3603177289081684e-06 3.1s 
+  base_bd27k5_C1250_R2.0                     ok=True delay=2.360627624886863e-06 2.9s 
+  base_bdpeak_C625_R0.5                      ok=True delay=2.3620316833052815e-06 3.1s 
+  base_bdpeak_C625_R1.0                      ok=True delay=2.362148491324246e-06 2.8s 
+  base_bdpeak_C625_R2.0                      ok=True delay=2.3618655097688217e-06 3.1s 
+  base_bdpeak_C1250_R0.5                     ok=True delay=2.351276358345529e-06 2.9s 
+  base_bdpeak_C1250_R1.0                     ok=True delay=2.3513844799382857e-06 2.9s 
+  base_bdpeak_C1250_R2.0                     ok=True delay=2.3510919858440542e-06 3.0s 
+== quench
+  quench_bd27k5_R0.5_tq0.5_rb                ok=True delay=2.378223794491071e-06 5.9s 
+  quench_bd27k5_R0.5_tq0.5_norb              ok=True delay=None 3.1s 
+  quench_bd27k5_R0.5_tq1.0_rb                ok=True delay=2.3796331369199574e-06 5.7s 
+  quench_bd27k5_R0.5_tq1.0_norb              ok=True delay=None 3.2s 
+  quench_bd27k5_R0.5_tq1.5_rb                ok=True delay=2.3732948661672047e-06 5.8s 
+  quench_bd27k5_R0.5_tq1.5_norb              ok=True delay=None 3.1s 
+  quench_bd27k5_R1.0_tq0.5_rb                ok=True delay=2.380135161627849e-06 5.7s 
+  quench_bd27k5_R1.0_tq0.5_norb              ok=True delay=None 3.0s 
+  quench_bd27k5_R1.0_tq1.0_rb                ok=True delay=2.381458035074961e-06 5.9s 
+  quench_bd27k5_R1.0_tq1.0_norb              ok=True delay=None 3.5s 
+  quench_bd27k5_R1.0_tq1.5_rb                ok=True delay=2.3798219090730517e-06 9.6s 
+  quench_bd27k5_R1.0_tq1.5_norb              ok=True delay=None 5.1s 
+  quench_bd27k5_R2.0_tq0.5_rb                ok=True delay=2.382658986696773e-06 9.0s 
+  quench_bd27k5_R2.0_tq0.5_norb              ok=True delay=None 5.0s 
+  quench_bd27k5_R2.0_tq1.0_rb                ok=True delay=2.3748822969226595e-06 7.8s 
+  quench_bd27k5_R2.0_tq1.0_norb              ok=True delay=None 3.0s 
+  quench_bd27k5_R2.0_tq1.5_rb                ok=True delay=2.3808936369477872e-06 7.2s 
+  quench_bd27k5_R2.0_tq1.5_norb              ok=True delay=None 4.0s 
+  quench_bdpeak_R1.0_tq0.5_rb                ok=True delay=2.3620840430206067e-06 6.6s 
+  quench_bdpeak_R1.0_tq0.5_norb              ok=True delay=None 4.0s 
+  quench_bdpeak_R1.0_tq1.0_rb                ok=True delay=2.370286190043833e-06 7.1s 
+  quench_bdpeak_R1.0_tq1.0_norb              ok=True delay=None 4.7s 
+  quench_bdpeak_R1.0_tq1.5_rb                ok=True delay=2.37298111544665e-06 7.2s 
+  quench_bdpeak_R1.0_tq1.5_norb              ok=True delay=None 3.9s 
+== temperature / available flux swing
+  dB_1.98_bd27k5                             ok=True delay=2.370916568786556e-06 5.3s 
+  dB_1.98_bdpeak                             ok=True delay=2.361430447952077e-06 4.4s 
+  dB_2.26_bd27k5                             ok=True delay=2.711400471828083e-06 3.4s 
+  dB_2.26_bdpeak                             ok=True delay=2.7022595084686384e-06 3.1s 
+  dB_2.38_bd27k5                             ok=True delay=2.857210718144396e-06 3.1s 
+  dB_2.38_bdpeak                             ok=True delay=2.8480838698238976e-06 3.1s 
+  dB_2.46_bd27k5                             ok=True delay=2.9545528349949866e-06 3.1s 
+  dB_2.46_bdpeak                             ok=True delay=2.945394516521599e-06 3.1s 
+== spike V.s jitter (+/-20 %)
+  jit_simspike_-20                           ok=True delay=2.370753977166035e-06 3.3s 
+  jit_simspike_+20                           ok=True delay=2.371002689427038e-06 3.1s 
+  jit_simspike_pk_-20                        ok=True delay=2.3611147364036343e-06 3.2s 
+  jit_simspike_pk_+20                        ok=True delay=2.3617686453186424e-06 3.1s 
+  jit_doc1.2mV.s_-20                         ok=False delay=None 0.4s unsupported operand type(s) for +: 'NoneType' and 'float'
+  jit_doc1.2mV.s_+20                         ok=True delay=2.370217645290484e-06 3.1s 
+== sensitivities
+  sens_eddy_ke_x0.5                          ok=True delay=2.3629114040443394e-06 3.1s 
+  sens_eddy_ke_x2                            ok=True delay=2.3877334640599084e-06 3.1s 
+  sens_Cw_3_pF                               ok=True delay=2.3711017427111356e-06 3.1s 
+  sens_Cw_3_pF_bd_at_peak                    ok=True delay=2.362107041958954e-06 3.4s 
+  sens_Cw_1.5_pF_bd_at_peak                  ok=True delay=2.362148491324246e-06 3.1s 
+  sens_SR3_L_unsat_5_uH                      ok=True delay=2.2850409006998676e-06 3.3s 
+  sens_SR3_L_sat_190_nH                      ok=True delay=2.3645668140025274e-06 3.3s 
+  sens_SR1SR2_LuLs_300                       ok=False delay=None 0.3s prs rev b  blocks=full  model=eddy
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct 
+== core-model comparison (eddy vs TTU port vs LTspice TTU)
+  cmp_ttu_bd27k5_R0.5                        ok=True delay=2.541289389146274e-06 3.5s 
+  cmp_ttu_bdpeak_R0.5                        ok=True delay=2.5394144408324416e-06 3.4s 
+  cmp_ttu_bd27k5_R1.0                        ok=True delay=2.5449136905406784e-06 3.5s 
+  cmp_ttu_bdpeak_R1.0                        ok=True delay=2.545411426101908e-06 3.5s 
+  cmp_ttu_bd27k5_R2.0                        ok=True delay=2.552601163094496e-06 3.7s 
+  cmp_ttu_bdpeak_R2.0                        ok=True delay=2.5578858097868667e-06 3.6s 
+  cmp_ttu_quench1.0_rb                       ok=True delay=2.546283949046441e-06 6.5s 
+  cmp_ttu_quench1.0_norb                     ok=True delay=None 3.4s 
+  cmp_ttu_nolatch_bd27k5_R0.5                ok=True delay=2.5793975192329923e-06 3.9s 
+  cmp_ttu_nolatch_bdpeak_R0.5                ok=True delay=2.5680993945142995e-06 3.7s 
+  cmp_ttu_nolatch_bd27k5_R1.0                ok=True delay=2.5799492999098035e-06 3.4s 
+  cmp_ttu_nolatch_bdpeak_R1.0                ok=True delay=2.5686221142184517e-06 3.5s 
+  cmp_ttu_nolatch_bd27k5_R2.0                ok=True delay=2.5810408954281537e-06 3.3s 
+  cmp_ttu_nolatch_bdpeak_R2.0                ok=True delay=2.569722568735042e-06 3.5s 
+  cmp_ttu_nolatch_quench1.0_rb               ok=True delay=2.5945434752258547e-06 6.8s 
+  cmp_ttu_nolatch_quench1.0_norb             ok=True delay=None 3.4s 
+  cmp_ttu_lt_bd27k5_R0.5                     ok=True delay=2.5412846216995947e-06 140.6s 
+  cmp_ttu_lt_bdpeak_R0.5                     ok=True delay=2.540992310862084e-06 191.5s 
+  cmp_ttu_lt_bd27k5_R1.0                     ok=True delay=2.5449507734666426e-06 105.9s 
+  cmp_ttu_lt_bdpeak_R1.0                     ok=True delay=2.5469043758576044e-06 102.2s 
+  cmp_ttu_lt_bd27k5_R2.0                     ok=True delay=2.5526833640384277e-06 104.6s 
+  cmp_ttu_lt_bdpeak_R2.0                     ok=True delay=2.5593323006550056e-06 107.0s 
+  cmp_ttu_lt_quench1.0_rb                    ok=True delay=2.546326836745413e-06 158.8s 
+  cmp_ttu_lt_quench1.0_norb                  ok=True delay=None 97.0s 
+done in 1316 s

@@ -1,0 +1,18 @@
+LTspice 26.1.1 for Windows
+Circuit: Z:\workspace\prs\sim\ltspice\runs\blk_Alternate_False.cir
+Start Time: Sun Oct 18 22:30:06 2026
+Options:method=gear solver=alt
+solver = Alternate
+Maximum thread count: 8
+tnom = 27
+temp = 27
+method = Gear
+AsciiRawFile = true
+Per .tran options, skipping operating point for transient analysis.
+Total elapsed time: 12.844 seconds.
+Total iterations: 2102145
+
+Files loaded:
+Z:\workspace\prs\sim\ltspice\runs\blk_Alternate_False.cir
+Z:\workspace\prs\sim\ltspice\runs\Core_Model_recentred.sub
+

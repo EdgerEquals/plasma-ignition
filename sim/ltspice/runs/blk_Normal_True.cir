@@ -1,0 +1,12 @@
+* stage2 block test
+.include Core_Model_recentred_clamped.sub
+.model D D
+C0b bk 0 62.5n IC=4000
+L1 bk m 0.27u
+X1 al bb m P fl hh ib irc Core_Model_RCc Ae=8e-4 Le=0.22 k1=5e-5 k2=10.87 k3=8 Gamma=0.21 Lc=1n R=8900 C=17.9p Nw=6 Bc=0.99
+Cp P 0 15p IC=0
+Rch P 0 1
+.tran 0 8u 0 0.5n uic
+.save V(bk) V(P) I(L1) V(bb) V(al)
+.options method=gear solver=normal
+.end

@@ -1,0 +1,48 @@
+* PRS Rev B  blocks=full  model=ttu_lt
+.options method=gear reltol=1e-4 abstol=1e-9 vntol=1e-4 itl4=200
+C0a a0 0 9.6e-08 IC=1100
+D_igbt a0 a1 DSW
+.model DSW D(Is=1e-12 N=1 Rs=1m)
+L_leak a1 a2 2.10976e-06
+L_pri a2 0 0.001
+L_sec 0 n1 0.961
+K_x L_pri L_sec 1
+C1 n1 0 1e-10
+C2 n2 0 1e-10
+C3 n3 0 1e-10
+R_bleed n3 0 1e+07
+* saturable inductor SR1: Ls=8.1e-05 Lu=0.081 VS=0.017
+G_SR1 0 lam_SR1 n2 n1 1
+C_SR1 lam_SR1 0 1
+R_SR1 lam_SR1 0 1e15
+B_SR1 n2 n1 I = v(lam_SR1)/0.081 + 12333.3*((uramp((v(lam_SR1)-0.017)) + 3.4000000000000007e-05*ln(1+exp(-abs((v(lam_SR1)-0.017))/3.4000000000000007e-05))) - (uramp((-v(lam_SR1)-0.00034)) + 3.4000000000000007e-05*ln(1+exp(-abs((-v(lam_SR1)-0.00034))/3.4000000000000007e-05))) + 1.54356e-09)
+
+* saturable inductor SR2: Ls=3.2e-06 Lu=0.0032 VS=0.0034
+G_SR2 0 lam_SR2 n3 n2 1
+C_SR2 lam_SR2 0 1
+R_SR2 lam_SR2 0 1e15
+B_SR2 n3 n2 I = v(lam_SR2)/0.0032 + 312188*((uramp((v(lam_SR2)-0.0034)) + 6.8e-06*ln(1+exp(-abs((v(lam_SR2)-0.0034))/6.8e-06))) - (uramp((-v(lam_SR2)-6.8e-05)) + 6.8e-06*ln(1+exp(-abs((-v(lam_SR2)-6.8e-05))/6.8e-06))) + 3.08713e-10)
+
+* saturable inductor SR3: Ls=1e-08 Lu=0.001 VS=0.00068
+G_SR3 0 lam_SR3 x n3 1
+C_SR3 lam_SR3 0 1
+R_SR3 lam_SR3 0 1e15
+B_SR3 x n3 I = v(lam_SR3)/0.001 + 9.9999e+07*((uramp((v(lam_SR3)-0.00068)) + 1.3600000000000001e-06*ln(1+exp(-abs((v(lam_SR3)-0.00068))/1.3600000000000001e-06))) - (uramp((-v(lam_SR3)-1.36e-05)) + 1.3600000000000001e-06*ln(1+exp(-abs((-v(lam_SR3)-1.36e-05))/1.3600000000000001e-06))) + 6.17425e-11)
+
+C_block x P 1e-09 IC=-4000
+C0b bk 0 6.25e-08 IC=4000
+C_plug P 0 1.5e-11 IC=4000
+* SRiso model=ttu_lt N=6 Ae=0.0008 le=0.22 VS=0.0095 (dB=1.979 T)
+L_iso_air bk iso_m 2.7e-07
+C_iso_w bk cw_s 1.5e-12
+V_iso_cw cw_s P 0
+.include Core_Model_recentred.sub
+.model D D
+X_iso iso_al iso_B iso_m P iso_fl iso_H iso_ib iso_irc Core_Model_RC Ae=0.0008 Le=0.22 k1=5e-05 k2=11.0878 k3=8 Gamma=0.21 Lc=1n R=8945.45 C=1.78862e-11 Nw=6 Bc=0.989583
+
+V_chg chg 0 PWL(0.000000e+00 0 1.245817e-06 0 1.246817e-06 1)
+B_ch P 0 I = v(P)*(v(chg)/0.5 + 1/1e+09)
+
+.tran 0 1.424582e-05 0 1.000e-10 uic
+.save V(n1) V(n2) V(n3) V(x) V(P) V(bk) V(iso_B) I(L_iso_air) I(V_iso_cw) V(chg) V(iso_m)
+.end

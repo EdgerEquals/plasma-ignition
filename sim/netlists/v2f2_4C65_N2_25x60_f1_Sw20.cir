@@ -1,0 +1,47 @@
+* PRS Rev B  blocks=stage1  model=eddy
+.options method=gear reltol=1e-4 abstol=1e-9 vntol=1e-4 itl4=200 maxord=2
+C0a a0 0 9.6e-08 IC=1100
+D_igbt a0 a1 DSW
+.model DSW D(Is=1e-12 N=1 Rs=1m)
+L_leak a1 a2 2.10976e-06
+L_pri a2 0 0.001
+L_sec 0 n1 0.961 IC=0
+K_x L_pri L_sec 1
+C1 n1 0 1e-10 IC=0
+C2 n2 0 1e-10 IC=0
+C3 n3 0 1e-10 IC=0
+R_bleed n3 0 1e+07
+* saturable inductor SR1: Ls=8.1e-05 Lu=0.081 VS=0.017
+G_SR1 0 lam_SR1 n2 n1 1
+C_SR1 lam_SR1 0 1
+R_SR1 lam_SR1 0 1e15
+B_SR1 n2 n1 I = v(lam_SR1)/0.081 + 12333.3*((uramp((v(lam_SR1)-0.017)) + 3.4000000000000007e-05*ln(1+exp(-abs((v(lam_SR1)-0.017))/3.4000000000000007e-05))) - (uramp((-v(lam_SR1)-0.00034)) + 3.4000000000000007e-05*ln(1+exp(-abs((-v(lam_SR1)-0.00034))/3.4000000000000007e-05))) + 1.54356e-09)
+
+* saturable inductor SR2: Ls=3.2e-06 Lu=0.0032 VS=0.0034
+G_SR2 0 lam_SR2 n3 n2 1
+C_SR2 lam_SR2 0 1
+R_SR2 lam_SR2 0 1e15
+B_SR2 n3 n2 I = v(lam_SR2)/0.0032 + 312188*((uramp((v(lam_SR2)-0.0034)) + 6.8e-06*ln(1+exp(-abs((v(lam_SR2)-0.0034))/6.8e-06))) - (uramp((-v(lam_SR2)-6.8e-05)) + 6.8e-06*ln(1+exp(-abs((-v(lam_SR2)-6.8e-05))/6.8e-06))) + 3.08713e-10)
+
+* v2 core SR3: N=2 A=0.000566667 le=0.133518 dB=0.6 VS=0.00068 Hc=200 ke=3.33333e-05 mui=125 Lair=3.8319e-08
+L_SR3_air x SR3_m 3.8319e-08
+G_SR3 0 lam_SR3 SR3_m n3 1
+C_SR3 lam_SR3 0 1
+R_SR3 lam_SR3 0 1e15
+B_SR3 SR3_m n3 I = 0.0667588*(200*tanh((v(SR3_m,n3)/0.00113333)/10000) + 3.33333e-05*(v(SR3_m,n3)/0.00113333) + v(lam_SR3)/1.78024e-07) + (1/1.91595e-09)*((uramp((v(lam_SR3)-0.00068)) + 1.3600000000000001e-06*ln(1+exp(-abs((v(lam_SR3)-0.00068))/1.3600000000000001e-06))) - (uramp((-v(lam_SR3)-1.36e-05)) + 1.3600000000000001e-06*ln(1+exp(-abs((-v(lam_SR3)-1.36e-05))/1.3600000000000001e-06))) + 6.17425e-11)
+
+C_block x P 1e-09 IC=-0
+C_plug P 0 1.5e-11 IC=0
+C_iso_w P 0 1.5e-12
+V_chg chg 0 PWL(0.000000e+00 0)
+B_ch P 0 I = v(P)*(v(chg)/1 + 1/1e+09)
+
+.control
+set wr_singlescale
+set wr_vecnames
+option numdgt=9
+tran 0.05n 1.450000e-06 0 1.000e-11 uic
+wrdata /workspace/prs/sim/out/v2f2_4C65_N2_25x60_f1_Sw20.dat v(n1) v(n2) v(n3) v(x) v(P) v(lam_SR1) v(lam_SR2) v(lam_SR3) v(chg) v(a0) i(L_leak)
+quit
+.endc
+.end

@@ -1,0 +1,23 @@
+LTspice 26.1.1 for Windows
+Circuit: Z:\workspace\prs\sim\ltspice\runs\signtest.cir
+Start Time: Sun Oct 18 22:29:18 2026
+Options:method=gear
+solver = Normal
+Maximum thread count: 8
+tnom = 27
+temp = 27
+method = Gear
+AsciiRawFile = true
+Per .tran options, skipping operating point for transient analysis.
+Warning: Simulation tolerance relaxed to achieve convergence from 2.5316417313346813e-06 
+Convergence Failure:  Time step too small; time = 2.53164e-06, timestep = 1.25e-19: trouble with node "x1:n003"
+
+Simulation Failed: Iteration limit reached
+
+Total elapsed time: 0.315 seconds.
+Total iterations: 10268
+
+Files loaded:
+Z:\workspace\prs\sim\ltspice\runs\signtest.cir
+Z:\workspace\prs\sim\ltspice\runs\Core_Model_recentred.sub
+

@@ -1,0 +1,7 @@
+  jit_simspike_-20                           ok=True delay=2.3782938203564143e-06 3.4s 
+  jit_simspike_+20                           ok=True delay=2.363944630977037e-06 3.2s 
+  jit_simspike_pk_-20                        ok=True delay=2.371110535363648e-06 3.2s 
+  jit_simspike_pk_+20                        ok=True delay=2.3531861836943258e-06 3.2s 
+  jit_doc1.2mV.s_-20                         ok=True delay=2.4316190536262175e-06 3.2s 
+  jit_doc1.2mV.s_+20                         ok=True delay=2.3106554833421557e-06 3.2s 
+  sens_SR1SR2_LuLs_300                       ok=True delay=2.368632167636641e-06 6.3s 

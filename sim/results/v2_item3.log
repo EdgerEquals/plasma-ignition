@@ -1,0 +1,259 @@
+    v2c_lossless_xfmr_150Hz shot 0: V_Cb start -4.00 end -5.92 next -6.55 kV VC3 next -2.55 kV  peak -40.3 kV delay 2.3685872605355074e-06
+    v2c_lossless_xfmr_150Hz shot 1: V_Cb start -6.55 end -7.66 next -8.13 kV VC3 next -4.13 kV  peak -36.8 kV delay 2.3682249422453966e-06
+    v2c_lossless_xfmr_150Hz shot 2: V_Cb start -8.13 end -8.96 next -9.10 kV VC3 next -5.10 kV  peak -34.5 kV delay 2.367904942341811e-06
+    v2c_lossless_xfmr_150Hz shot 3: V_Cb start -9.10 end -9.62 next -9.69 kV VC3 next -5.69 kV  peak -33.0 kV delay 2.3676964378125594e-06
+    v2c_lossless_xfmr_150Hz shot 4: V_Cb start -9.69 end -10.05 next -10.06 kV VC3 next -6.06 kV  peak -32.1 kV delay 2.367528195455297e-06
+    v2c_lossless_xfmr_150Hz shot 5: V_Cb start -10.06 end -10.30 next -10.28 kV VC3 next -6.28 kV  peak -31.5 kV delay 2.367421787427079e-06
+    v2c_lossless_xfmr_150Hz shot 6: V_Cb start -10.28 end -10.45 next -10.42 kV VC3 next -6.42 kV  peak -31.1 kV delay 2.3673337890151507e-06
+    v2c_lossless_xfmr_150Hz shot 7: V_Cb start -10.42 end -10.53 next -10.50 kV VC3 next -6.50 kV  peak -30.9 kV delay 2.3672612923827204e-06
+  v2c_lossless_xfmr_150Hz ok=True 28s
+    v2c_lossless_xfmr_200Hz_burst shot 0: V_Cb start -4.00 end -5.92 next -1.26 kV VC3 next +2.74 kV  peak -40.3 kV delay 2.3685872605355074e-06
+    v2c_lossless_xfmr_200Hz_burst shot 1: V_Cb start -1.26 end -4.25 next -3.05 kV VC3 next +0.95 kV  peak -43.8 kV delay 2.369000209529475e-06
+    v2c_lossless_xfmr_200Hz_burst shot 2: V_Cb start -3.05 end -5.35 next -1.88 kV VC3 next +2.12 kV  peak -41.5 kV delay 2.368602170221964e-06
+    v2c_lossless_xfmr_200Hz_burst shot 3: V_Cb start -1.88 end -4.68 next -2.66 kV VC3 next +1.34 kV  peak -43.0 kV delay 2.3689283622470775e-06
+    v2c_lossless_xfmr_200Hz_burst shot 4: V_Cb start -2.66 end -4.94 next -2.15 kV VC3 next +1.85 kV  peak -42.0 kV delay 2.368712679846073e-06
+    v2c_lossless_xfmr_200Hz_burst shot 5: V_Cb start -2.15 end -4.87 next -2.49 kV VC3 next +1.51 kV  peak -42.6 kV delay 2.3689331577255635e-06
+  v2c_lossless_xfmr_200Hz_burst ok=True 21s
+    v2c_lossless_xfmr_300Hz_burst shot 0: V_Cb start -4.00 end -5.92 next -6.97 kV VC3 next -2.97 kV  peak -40.3 kV delay 2.3685872605355074e-06
+    v2c_lossless_xfmr_300Hz_burst shot 1: V_Cb start -6.97 end -7.85 next -9.10 kV VC3 next -5.10 kV  peak -36.1 kV delay 2.3681380141425043e-06
+    v2c_lossless_xfmr_300Hz_burst shot 2: V_Cb start -9.10 end -9.12 next -10.61 kV VC3 next -6.61 kV  peak -32.8 kV delay 2.3676510955435092e-06
+    v2c_lossless_xfmr_300Hz_burst shot 3: V_Cb start -10.61 end -9.82 next -11.67 kV VC3 next -7.67 kV  peak -30.3 kV delay 2.3670497211550746e-06
+    v2c_lossless_xfmr_300Hz_burst shot 4: V_Cb start -11.67 end -10.58 next -12.39 kV VC3 next -8.39 kV  peak -28.3 kV delay 2.3661553272710935e-06
+    v2c_lossless_xfmr_300Hz_burst shot 5: V_Cb start -12.39 end -10.96 next -13.05 kV VC3 next -9.05 kV  peak 3.9 kV delay 2.373014416919142e-06
+  v2c_lossless_xfmr_300Hz_burst ok=True 21s
+    v2c_lossless_xfmr_400Hz_burst shot 0: V_Cb start -4.00 end -5.92 next -2.98 kV VC3 next +1.02 kV  peak -40.3 kV delay 2.3685872605355074e-06
+    v2c_lossless_xfmr_400Hz_burst shot 1: V_Cb start -2.98 end -3.93 next -0.28 kV VC3 next +3.72 kV  peak -40.6 kV delay 2.368886648885361e-06
+    v2c_lossless_xfmr_400Hz_burst shot 2: V_Cb start -0.28 end -2.22 next -1.07 kV VC3 next +2.93 kV  peak -44.1 kV delay 2.369054213577695e-06
+    v2c_lossless_xfmr_400Hz_burst shot 3: V_Cb start -1.07 end -3.75 next -2.88 kV VC3 next +1.12 kV  peak -43.7 kV delay 2.368993994505646e-06
+    v2c_lossless_xfmr_400Hz_burst shot 4: V_Cb start -2.88 end -4.65 next -2.28 kV VC3 next +1.72 kV  peak -41.4 kV delay 2.36868183347266e-06
+    v2c_lossless_xfmr_400Hz_burst shot 5: V_Cb start -2.28 end -3.77 next -1.06 kV VC3 next +2.94 kV  peak -41.8 kV delay 2.3689549200137e-06
+  v2c_lossless_xfmr_400Hz_burst ok=True 21s
+    v2c_lossless_xfmr_600Hz_burst shot 0: V_Cb start -4.00 end -5.92 next -0.75 kV VC3 next +3.25 kV  peak -40.3 kV delay 2.3685872605355074e-06
+    v2c_lossless_xfmr_600Hz_burst shot 1: V_Cb start -0.75 end -3.85 next -3.27 kV VC3 next +0.73 kV  peak -44.4 kV delay 2.3690556070286694e-06
+    v2c_lossless_xfmr_600Hz_burst shot 2: V_Cb start -3.27 end -5.55 next -1.33 kV VC3 next +2.67 kV  peak -41.2 kV delay 2.368590261160028e-06
+    v2c_lossless_xfmr_600Hz_burst shot 3: V_Cb start -1.33 end -4.29 next -2.83 kV VC3 next +1.17 kV  peak -43.7 kV delay 2.368999207397874e-06
+    v2c_lossless_xfmr_600Hz_burst shot 4: V_Cb start -2.83 end -5.23 next -1.67 kV VC3 next +2.33 kV  peak -41.8 kV delay 2.3686352145521775e-06
+    v2c_lossless_xfmr_600Hz_burst shot 5: V_Cb start -1.67 end -4.51 next -2.58 kV VC3 next +1.42 kV  peak -43.2 kV delay 2.368965161629514e-06
+  v2c_lossless_xfmr_600Hz_burst ok=True 22s
+    v2c_xfmr_Rc1M_150Hz shot 0: V_Cb start -4.00 end -5.92 next -4.20 kV VC3 next -0.20 kV  peak -40.3 kV delay 2.3685872605355074e-06
+    v2c_xfmr_Rc1M_150Hz shot 1: V_Cb start -4.20 end -6.11 next -4.21 kV VC3 next -0.21 kV  peak -39.9 kV delay 2.3686202809116357e-06
+    v2c_xfmr_Rc1M_150Hz shot 2: V_Cb start -4.21 end -6.13 next -4.21 kV VC3 next -0.21 kV  peak -40.0 kV delay 2.368571327166178e-06
+    v2c_xfmr_Rc1M_150Hz shot 3: V_Cb start -4.21 end -6.13 next -4.21 kV VC3 next -0.21 kV  peak -40.0 kV delay 2.3685705525262073e-06
+    v2c_xfmr_Rc1M_150Hz shot 4: V_Cb start -4.21 end -6.13 next -4.21 kV VC3 next -0.21 kV  peak -40.0 kV delay 2.3685765004877753e-06
+    v2c_xfmr_Rc1M_150Hz shot 5: V_Cb start -4.21 end -6.13 next -4.21 kV VC3 next -0.21 kV  peak -40.0 kV delay 2.3685715020211536e-06
+    v2c_xfmr_Rc1M_150Hz shot 6: V_Cb start -4.21 end -6.13 next -4.21 kV VC3 next -0.21 kV  peak -40.0 kV delay 2.368575735979491e-06
+    v2c_xfmr_Rc1M_150Hz shot 7: V_Cb start -4.21 end -6.13 next -4.21 kV VC3 next -0.21 kV  peak -40.0 kV delay 2.3685770094866844e-06
+  v2c_xfmr_Rc1M_150Hz ok=True 33s
+    v2c_xfmr_Rc1M_200Hz_burst shot 0: V_Cb start -4.00 end -5.92 next -3.59 kV VC3 next +0.41 kV  peak -40.3 kV delay 2.3685872605355074e-06
+    v2c_xfmr_Rc1M_200Hz_burst shot 1: V_Cb start -3.59 end -5.79 next -3.63 kV VC3 next +0.37 kV  peak -40.8 kV delay 2.368619457317192e-06
+    v2c_xfmr_Rc1M_200Hz_burst shot 2: V_Cb start -3.63 end -5.82 next -3.63 kV VC3 next +0.37 kV  peak -40.7 kV delay 2.3686225641397534e-06
+    v2c_xfmr_Rc1M_200Hz_burst shot 3: V_Cb start -3.63 end -5.82 next -3.63 kV VC3 next +0.37 kV  peak -40.7 kV delay 2.3686199155444965e-06
+    v2c_xfmr_Rc1M_200Hz_burst shot 4: V_Cb start -3.63 end -5.81 next -3.63 kV VC3 next +0.37 kV  peak -40.8 kV delay 2.368611056687478e-06
+    v2c_xfmr_Rc1M_200Hz_burst shot 5: V_Cb start -3.63 end -5.81 next -3.63 kV VC3 next +0.37 kV  peak -40.6 kV delay 2.368654217630277e-06
+  v2c_xfmr_Rc1M_200Hz_burst ok=True 25s
+    v2c_xfmr_Rc1M_300Hz_burst shot 0: V_Cb start -4.00 end -5.92 next -4.84 kV VC3 next -0.84 kV  peak -40.3 kV delay 2.3685872605355074e-06
+    v2c_xfmr_Rc1M_300Hz_burst shot 1: V_Cb start -4.84 end -6.48 next -5.01 kV VC3 next -1.01 kV  peak -39.1 kV delay 2.3684589980979263e-06
+    v2c_xfmr_Rc1M_300Hz_burst shot 2: V_Cb start -5.01 end -6.61 next -5.04 kV VC3 next -1.04 kV  peak -38.9 kV delay 2.368422609700296e-06
+    v2c_xfmr_Rc1M_300Hz_burst shot 3: V_Cb start -5.04 end -6.64 next -5.05 kV VC3 next -1.05 kV  peak -38.8 kV delay 2.36842004250974e-06
+    v2c_xfmr_Rc1M_300Hz_burst shot 4: V_Cb start -5.05 end -6.65 next -5.05 kV VC3 next -1.05 kV  peak -38.8 kV delay 2.3684203514012186e-06
+    v2c_xfmr_Rc1M_300Hz_burst shot 5: V_Cb start -5.05 end -6.65 next -5.05 kV VC3 next -1.05 kV  peak -38.8 kV delay 2.36841397528129e-06
+  v2c_xfmr_Rc1M_300Hz_burst ok=True 22s
+    v2c_xfmr_Rc1M_400Hz_burst shot 0: V_Cb start -4.00 end -5.92 next -3.60 kV VC3 next +0.40 kV  peak -40.3 kV delay 2.3685872605355074e-06
+    v2c_xfmr_Rc1M_400Hz_burst shot 1: V_Cb start -3.60 end -5.19 next -3.20 kV VC3 next +0.80 kV  peak -40.4 kV delay 2.3686129213929185e-06
+    v2c_xfmr_Rc1M_400Hz_burst shot 2: V_Cb start -3.20 end -4.88 next -3.25 kV VC3 next +0.75 kV  peak -40.9 kV delay 2.3686583026368087e-06
+    v2c_xfmr_Rc1M_400Hz_burst shot 3: V_Cb start -3.25 end -4.92 next -3.29 kV VC3 next +0.71 kV  peak -40.9 kV delay 2.3686486820284754e-06
+    v2c_xfmr_Rc1M_400Hz_burst shot 4: V_Cb start -3.29 end -4.98 next -3.28 kV VC3 next +0.72 kV  peak -40.9 kV delay 2.3686207995501846e-06
+    v2c_xfmr_Rc1M_400Hz_burst shot 5: V_Cb start -3.28 end -4.99 next -3.28 kV VC3 next +0.72 kV  peak -40.9 kV delay 2.368624281600885e-06
+  v2c_xfmr_Rc1M_400Hz_burst ok=True 22s
+    v2c_xfmr_Rc1M_600Hz_burst shot 0: V_Cb start -4.00 end -5.92 next -2.27 kV VC3 next +1.73 kV  peak -40.3 kV delay 2.3685872605355074e-06
+    v2c_xfmr_Rc1M_600Hz_burst shot 1: V_Cb start -2.27 end -4.97 next -3.00 kV VC3 next +1.00 kV  peak -42.5 kV delay 2.368747595169978e-06
+    v2c_xfmr_Rc1M_600Hz_burst shot 2: V_Cb start -3.00 end -5.27 next -2.69 kV VC3 next +1.31 kV  peak -41.6 kV delay 2.3686091213933816e-06
+    v2c_xfmr_Rc1M_600Hz_burst shot 3: V_Cb start -2.69 end -4.95 next -2.82 kV VC3 next +1.18 kV  peak -42.0 kV delay 2.368711801592644e-06
+    v2c_xfmr_Rc1M_600Hz_burst shot 4: V_Cb start -2.82 end -5.13 next -2.76 kV VC3 next +1.24 kV  peak -41.8 kV delay 2.368664960575774e-06
+    v2c_xfmr_Rc1M_600Hz_burst shot 5: V_Cb start -2.76 end -5.03 next -2.79 kV VC3 next +1.21 kV  peak -41.9 kV delay 2.3687049678698637e-06
+  v2c_xfmr_Rc1M_600Hz_burst ok=True 22s
+    v2c_xfmr_Rc200k_150Hz shot 0: V_Cb start -4.00 end -5.92 next -4.00 kV VC3 next -0.00 kV  peak -40.3 kV delay 2.3685872605355074e-06
+    v2c_xfmr_Rc200k_150Hz shot 1: V_Cb start -4.00 end -5.92 next -4.00 kV VC3 next -0.00 kV  peak -40.2 kV delay 2.36858653443516e-06
+    v2c_xfmr_Rc200k_150Hz shot 2: V_Cb start -4.00 end -5.92 next -4.00 kV VC3 next -0.00 kV  peak -40.2 kV delay 2.3685865345741966e-06
+    v2c_xfmr_Rc200k_150Hz shot 3: V_Cb start -4.00 end -5.92 next -4.00 kV VC3 next -0.00 kV  peak -40.2 kV delay 2.3685865345741966e-06
+    v2c_xfmr_Rc200k_150Hz shot 4: V_Cb start -4.00 end -5.92 next -4.00 kV VC3 next -0.00 kV  peak -40.2 kV delay 2.3685865345741966e-06
+    v2c_xfmr_Rc200k_150Hz shot 5: V_Cb start -4.00 end -5.92 next -4.00 kV VC3 next -0.00 kV  peak -40.2 kV delay 2.3685865345741966e-06
+    v2c_xfmr_Rc200k_150Hz shot 6: V_Cb start -4.00 end -5.92 next -4.00 kV VC3 next -0.00 kV  peak -40.2 kV delay 2.3685865345741966e-06
+    v2c_xfmr_Rc200k_150Hz shot 7: V_Cb start -4.00 end -5.92 next -4.00 kV VC3 next -0.00 kV  peak -40.2 kV delay 2.3685865345741966e-06
+  v2c_xfmr_Rc200k_150Hz ok=True 28s
+    v2c_xfmr_Rc200k_200Hz_burst shot 0: V_Cb start -4.00 end -5.92 next -4.00 kV VC3 next +0.00 kV  peak -40.3 kV delay 2.3685872605355074e-06
+    v2c_xfmr_Rc200k_200Hz_burst shot 1: V_Cb start -4.00 end -5.92 next -4.00 kV VC3 next +0.00 kV  peak -40.3 kV delay 2.368586455285108e-06
+    v2c_xfmr_Rc200k_200Hz_burst shot 2: V_Cb start -4.00 end -5.92 next -4.00 kV VC3 next +0.00 kV  peak -40.3 kV delay 2.3685873371529866e-06
+    v2c_xfmr_Rc200k_200Hz_burst shot 3: V_Cb start -4.00 end -5.96 next -4.00 kV VC3 next +0.00 kV  peak -40.1 kV delay 2.368615880979211e-06
+    v2c_xfmr_Rc200k_200Hz_burst shot 4: V_Cb start -4.00 end -5.92 next -4.00 kV VC3 next +0.00 kV  peak -40.3 kV delay 2.3685862491052058e-06
+    v2c_xfmr_Rc200k_200Hz_burst shot 5: V_Cb start -4.00 end -5.92 next -4.00 kV VC3 next +0.00 kV  peak -40.3 kV delay 2.3685864605695302e-06
+  v2c_xfmr_Rc200k_200Hz_burst ok=True 26s
+    v2c_xfmr_Rc200k_300Hz_burst shot 0: V_Cb start -4.00 end -5.92 next -4.01 kV VC3 next -0.01 kV  peak -40.3 kV delay 2.3685872605355074e-06
+    v2c_xfmr_Rc200k_300Hz_burst shot 1: V_Cb start -4.01 end -5.92 next -4.01 kV VC3 next -0.01 kV  peak -40.2 kV delay 2.368595854749436e-06
+    v2c_xfmr_Rc200k_300Hz_burst shot 2: V_Cb start -4.01 end -5.92 next -4.01 kV VC3 next -0.01 kV  peak -40.2 kV delay 2.3685952491238384e-06
+    v2c_xfmr_Rc200k_300Hz_burst shot 3: V_Cb start -4.01 end -5.92 next -4.01 kV VC3 next -0.01 kV  peak -40.2 kV delay 2.368595262326863e-06
+    v2c_xfmr_Rc200k_300Hz_burst shot 4: V_Cb start -4.01 end -5.92 next -4.01 kV VC3 next -0.01 kV  peak -40.2 kV delay 2.368595263410503e-06
+    v2c_xfmr_Rc200k_300Hz_burst shot 5: V_Cb start -4.01 end -5.92 next -4.01 kV VC3 next -0.01 kV  peak -40.2 kV delay 2.368595263509939e-06
+  v2c_xfmr_Rc200k_300Hz_burst ok=True 21s
+    v2c_xfmr_Rc200k_400Hz_burst shot 0: V_Cb start -4.00 end -5.92 next -3.99 kV VC3 next +0.01 kV  peak -40.3 kV delay 2.3685872605355074e-06
+    v2c_xfmr_Rc200k_400Hz_burst shot 1: V_Cb start -3.99 end -5.93 next -3.99 kV VC3 next +0.01 kV  peak -40.1 kV delay 2.368608918780983e-06
+    v2c_xfmr_Rc200k_400Hz_burst shot 2: V_Cb start -3.99 end -5.93 next -3.99 kV VC3 next +0.01 kV  peak -40.3 kV delay 2.368596596025911e-06
+    v2c_xfmr_Rc200k_400Hz_burst shot 3: V_Cb start -3.99 end -5.94 next -3.99 kV VC3 next +0.01 kV  peak -40.3 kV delay 2.368583874090189e-06
+    v2c_xfmr_Rc200k_400Hz_burst shot 4: V_Cb start -3.99 end -5.94 next -3.99 kV VC3 next +0.01 kV  peak -40.3 kV delay 2.3685847948735055e-06
+    v2c_xfmr_Rc200k_400Hz_burst shot 5: V_Cb start -3.99 end -5.94 next -3.99 kV VC3 next +0.01 kV  peak -40.3 kV delay 2.3685957080733164e-06
+  v2c_xfmr_Rc200k_400Hz_burst ok=True 25s
+    v2c_xfmr_Rc200k_600Hz_burst shot 0: V_Cb start -4.00 end -5.92 next -3.86 kV VC3 next +0.14 kV  peak -40.3 kV delay 2.3685872605355074e-06
+    v2c_xfmr_Rc200k_600Hz_burst shot 1: V_Cb start -3.86 end -5.88 next -3.86 kV VC3 next +0.14 kV  peak -40.4 kV delay 2.3685649847027897e-06
+    v2c_xfmr_Rc200k_600Hz_burst shot 2: V_Cb start -3.86 end -5.87 next -3.86 kV VC3 next +0.14 kV  peak -40.4 kV delay 2.3685657032668546e-06
+    v2c_xfmr_Rc200k_600Hz_burst shot 3: V_Cb start -3.86 end -5.86 next -3.86 kV VC3 next +0.14 kV  peak -40.4 kV delay 2.368564451741972e-06
+    v2c_xfmr_Rc200k_600Hz_burst shot 4: V_Cb start -3.86 end -5.86 next -3.86 kV VC3 next +0.14 kV  peak -40.4 kV delay 2.3685647736548705e-06
+    v2c_xfmr_Rc200k_600Hz_burst shot 5: V_Cb start -3.86 end -5.85 next -3.86 kV VC3 next +0.14 kV  peak -40.4 kV delay 2.36856327009761e-06
+  v2c_xfmr_Rc200k_600Hz_burst ok=True 21s
+    v2c_Rc1M_Rx1M_150Hz shot 0: V_Cb start -4.00 end -5.84 next -4.02 kV VC3 next -0.02 kV  peak -40.3 kV delay 2.368588454666243e-06
+    v2c_Rc1M_Rx1M_150Hz shot 1: V_Cb start -4.02 end -5.89 next -4.02 kV VC3 next -0.02 kV  peak -40.1 kV delay 2.3686309684712258e-06
+    v2c_Rc1M_Rx1M_150Hz shot 2: V_Cb start -4.02 end -5.82 next -4.02 kV VC3 next -0.02 kV  peak -40.2 kV delay 2.368593379362295e-06
+    v2c_Rc1M_Rx1M_150Hz shot 3: V_Cb start -4.02 end -5.82 next -4.02 kV VC3 next -0.02 kV  peak -40.2 kV delay 2.3685940471650204e-06
+    v2c_Rc1M_Rx1M_150Hz shot 4: V_Cb start -4.02 end -5.89 next -4.02 kV VC3 next -0.02 kV  peak -40.1 kV delay 2.3686327511845308e-06
+    v2c_Rc1M_Rx1M_150Hz shot 5: V_Cb start -4.02 end -5.82 next -4.02 kV VC3 next -0.02 kV  peak -40.2 kV delay 2.368593311795377e-06
+    v2c_Rc1M_Rx1M_150Hz shot 6: V_Cb start -4.02 end -5.82 next -4.02 kV VC3 next -0.02 kV  peak -40.2 kV delay 2.3685940308942883e-06
+    v2c_Rc1M_Rx1M_150Hz shot 7: V_Cb start -4.02 end -5.89 next -4.02 kV VC3 next -0.02 kV  peak -40.1 kV delay 2.368632753304096e-06
+  v2c_Rc1M_Rx1M_150Hz ok=True 44s
+    v2c_Rc1M_Rx1M_200Hz_burst shot 0: V_Cb start -4.00 end -5.84 next -3.94 kV VC3 next +0.06 kV  peak -40.3 kV delay 2.368588454666243e-06
+    v2c_Rc1M_Rx1M_200Hz_burst shot 1: V_Cb start -3.94 end -5.84 next -3.94 kV VC3 next +0.06 kV  peak -40.3 kV delay 2.3685928055019463e-06
+    v2c_Rc1M_Rx1M_200Hz_burst shot 2: V_Cb start -3.94 end -5.82 next -3.94 kV VC3 next +0.06 kV  peak -40.3 kV delay 2.368576140448369e-06
+    v2c_Rc1M_Rx1M_200Hz_burst shot 3: V_Cb start -3.94 end -5.82 next -3.94 kV VC3 next +0.06 kV  peak -40.3 kV delay 2.3685753762515816e-06
+    v2c_Rc1M_Rx1M_200Hz_burst shot 4: V_Cb start -3.94 end -5.82 next -3.94 kV VC3 next +0.06 kV  peak -40.3 kV delay 2.3685752977939906e-06
+    v2c_Rc1M_Rx1M_200Hz_burst shot 5: V_Cb start -3.94 end -5.82 next -3.94 kV VC3 next +0.06 kV  peak -40.3 kV delay 2.3685752781743393e-06
+  v2c_Rc1M_Rx1M_200Hz_burst ok=True 22s
+    v2c_Rc1M_Rx1M_300Hz_burst shot 0: V_Cb start -4.00 end -5.84 next -4.23 kV VC3 next -0.23 kV  peak -40.3 kV delay 2.368588454666243e-06
+    v2c_Rc1M_Rx1M_300Hz_burst shot 1: V_Cb start -4.23 end -6.08 next -4.25 kV VC3 next -0.25 kV  peak -39.9 kV delay 2.3685712875530035e-06
+    v2c_Rc1M_Rx1M_300Hz_burst shot 2: V_Cb start -4.25 end -6.09 next -4.25 kV VC3 next -0.25 kV  peak -39.9 kV delay 2.36857801099064e-06
+    v2c_Rc1M_Rx1M_300Hz_burst shot 3: V_Cb start -4.25 end -6.09 next -4.25 kV VC3 next -0.25 kV  peak -39.9 kV delay 2.368565776292122e-06
+    v2c_Rc1M_Rx1M_300Hz_burst shot 4: V_Cb start -4.25 end -6.09 next -4.25 kV VC3 next -0.25 kV  peak -39.9 kV delay 2.368577652906119e-06
+    v2c_Rc1M_Rx1M_300Hz_burst shot 5: V_Cb start -4.25 end -6.09 next -4.25 kV VC3 next -0.25 kV  peak -39.9 kV delay 2.3685765870255494e-06
+  v2c_Rc1M_Rx1M_300Hz_burst ok=True 22s
+    v2c_Rc1M_Rx1M_400Hz_burst shot 0: V_Cb start -4.00 end -5.84 next -3.85 kV VC3 next +0.15 kV  peak -40.3 kV delay 2.368588454666243e-06
+    v2c_Rc1M_Rx1M_400Hz_burst shot 1: V_Cb start -3.85 end -5.57 next -3.79 kV VC3 next +0.21 kV  peak -40.3 kV delay 2.368592347699354e-06
+    v2c_Rc1M_Rx1M_400Hz_burst shot 2: V_Cb start -3.79 end -5.58 next -3.79 kV VC3 next +0.21 kV  peak -40.4 kV delay 2.3685729440990323e-06
+    v2c_Rc1M_Rx1M_400Hz_burst shot 3: V_Cb start -3.79 end -5.55 next -3.79 kV VC3 next +0.21 kV  peak -40.4 kV delay 2.3685627000059096e-06
+    v2c_Rc1M_Rx1M_400Hz_burst shot 4: V_Cb start -3.79 end -5.57 next -3.79 kV VC3 next +0.21 kV  peak -40.4 kV delay 2.3685614643798676e-06
+    v2c_Rc1M_Rx1M_400Hz_burst shot 5: V_Cb start -3.79 end -5.53 next -3.79 kV VC3 next +0.21 kV  peak -40.4 kV delay 2.3685599146805454e-06
+  v2c_Rc1M_Rx1M_400Hz_burst ok=True 22s
+    v2c_Rc1M_Rx1M_600Hz_burst shot 0: V_Cb start -4.00 end -5.84 next -3.09 kV VC3 next +0.91 kV  peak -40.3 kV delay 2.368588454666243e-06
+    v2c_Rc1M_Rx1M_600Hz_burst shot 1: V_Cb start -3.09 end -5.28 next -3.29 kV VC3 next +0.71 kV  peak -41.5 kV delay 2.368611262408381e-06
+    v2c_Rc1M_Rx1M_600Hz_burst shot 2: V_Cb start -3.29 end -5.33 next -3.25 kV VC3 next +0.75 kV  peak -41.2 kV delay 2.368596668247434e-06
+    v2c_Rc1M_Rx1M_600Hz_burst shot 3: V_Cb start -3.25 end -5.32 next -3.26 kV VC3 next +0.74 kV  peak -41.3 kV delay 2.3685967310106372e-06
+    v2c_Rc1M_Rx1M_600Hz_burst shot 4: V_Cb start -3.26 end -5.33 next -3.26 kV VC3 next +0.74 kV  peak -41.2 kV delay 2.368590317812132e-06
+    v2c_Rc1M_Rx1M_600Hz_burst shot 5: V_Cb start -3.26 end -5.36 next -3.26 kV VC3 next +0.74 kV  peak -41.2 kV delay 2.3686018074410703e-06
+  v2c_Rc1M_Rx1M_600Hz_burst ok=True 23s
+    v2c_Rc1M_Rx300k_150Hz shot 0: V_Cb start -4.00 end -5.67 next -4.00 kV VC3 next -0.00 kV  peak -40.2 kV delay 2.3686050965480154e-06
+    v2c_Rc1M_Rx300k_150Hz shot 1: V_Cb start -4.00 end -5.67 next -4.00 kV VC3 next -0.00 kV  peak -40.2 kV delay 2.368604496109217e-06
+    v2c_Rc1M_Rx300k_150Hz shot 2: V_Cb start -4.00 end -5.67 next -4.00 kV VC3 next -0.00 kV  peak -40.2 kV delay 2.3686044948610675e-06
+    v2c_Rc1M_Rx300k_150Hz shot 3: V_Cb start -4.00 end -5.67 next -4.00 kV VC3 next -0.00 kV  peak -40.2 kV delay 2.3686044948610675e-06
+    v2c_Rc1M_Rx300k_150Hz shot 4: V_Cb start -4.00 end -5.67 next -4.00 kV VC3 next -0.00 kV  peak -40.2 kV delay 2.3686044948610675e-06
+    v2c_Rc1M_Rx300k_150Hz shot 5: V_Cb start -4.00 end -5.67 next -4.00 kV VC3 next -0.00 kV  peak -40.2 kV delay 2.3686044948610675e-06
+    v2c_Rc1M_Rx300k_150Hz shot 6: V_Cb start -4.00 end -5.67 next -4.00 kV VC3 next -0.00 kV  peak -40.2 kV delay 2.3686044948610675e-06
+    v2c_Rc1M_Rx300k_150Hz shot 7: V_Cb start -4.00 end -5.67 next -4.00 kV VC3 next -0.00 kV  peak -40.2 kV delay 2.3686044948610675e-06
+  v2c_Rc1M_Rx300k_150Hz ok=True 30s
+    v2c_Rc1M_Rx300k_200Hz_burst shot 0: V_Cb start -4.00 end -5.67 next -4.00 kV VC3 next +0.00 kV  peak -40.2 kV delay 2.3686050965480154e-06
+    v2c_Rc1M_Rx300k_200Hz_burst shot 1: V_Cb start -4.00 end -5.67 next -4.00 kV VC3 next +0.00 kV  peak -40.3 kV delay 2.3686000806089688e-06
+    v2c_Rc1M_Rx300k_200Hz_burst shot 2: V_Cb start -4.00 end -5.67 next -4.00 kV VC3 next +0.00 kV  peak -40.3 kV delay 2.3686000959157355e-06
+    v2c_Rc1M_Rx300k_200Hz_burst shot 3: V_Cb start -4.00 end -5.67 next -4.00 kV VC3 next +0.00 kV  peak -40.3 kV delay 2.3686001210712507e-06
+    v2c_Rc1M_Rx300k_200Hz_burst shot 4: V_Cb start -4.00 end -5.67 next -4.00 kV VC3 next +0.00 kV  peak -40.3 kV delay 2.368600062678032e-06
+    v2c_Rc1M_Rx300k_200Hz_burst shot 5: V_Cb start -4.00 end -5.67 next -4.00 kV VC3 next +0.00 kV  peak -40.3 kV delay 2.368600093311024e-06
+  v2c_Rc1M_Rx300k_200Hz_burst ok=True 22s
+    v2c_Rc1M_Rx300k_300Hz_burst shot 0: V_Cb start -4.00 end -5.67 next -4.01 kV VC3 next -0.01 kV  peak -40.2 kV delay 2.3686050965480154e-06
+    v2c_Rc1M_Rx300k_300Hz_burst shot 1: V_Cb start -4.01 end -5.66 next -4.01 kV VC3 next -0.01 kV  peak -40.2 kV delay 2.368607076723307e-06
+    v2c_Rc1M_Rx300k_300Hz_burst shot 2: V_Cb start -4.01 end -5.66 next -4.01 kV VC3 next -0.01 kV  peak -40.2 kV delay 2.36860611345759e-06
+    v2c_Rc1M_Rx300k_300Hz_burst shot 3: V_Cb start -4.01 end -5.73 next -4.01 kV VC3 next -0.01 kV  peak -40.1 kV delay 2.368633889327486e-06
+    v2c_Rc1M_Rx300k_300Hz_burst shot 4: V_Cb start -4.01 end -5.66 next -4.01 kV VC3 next -0.01 kV  peak -40.2 kV delay 2.3686096066436976e-06
+    v2c_Rc1M_Rx300k_300Hz_burst shot 5: V_Cb start -4.01 end -5.66 next -4.01 kV VC3 next -0.01 kV  peak -40.2 kV delay 2.3686060435093794e-06
+  v2c_Rc1M_Rx300k_300Hz_burst ok=True 26s
+    v2c_Rc1M_Rx300k_400Hz_burst shot 0: V_Cb start -4.00 end -5.67 next -3.99 kV VC3 next +0.01 kV  peak -40.2 kV delay 2.3686050965480154e-06
+    v2c_Rc1M_Rx300k_400Hz_burst shot 1: V_Cb start -3.99 end -5.73 next -3.99 kV VC3 next +0.01 kV  peak -40.3 kV delay 2.3686020766917726e-06
+    v2c_Rc1M_Rx300k_400Hz_burst shot 2: V_Cb start -3.99 end -5.72 next -3.99 kV VC3 next +0.01 kV  peak -40.3 kV delay 2.36859084574667e-06
+    v2c_Rc1M_Rx300k_400Hz_burst shot 3: V_Cb start -3.99 end -5.72 next -3.99 kV VC3 next +0.01 kV  peak -40.2 kV delay 2.3685946201735342e-06
+    v2c_Rc1M_Rx300k_400Hz_burst shot 4: V_Cb start -3.99 end -5.72 next -3.99 kV VC3 next +0.01 kV  peak -40.2 kV delay 2.368601783833221e-06
+    v2c_Rc1M_Rx300k_400Hz_burst shot 5: V_Cb start -3.99 end -5.72 next -3.99 kV VC3 next +0.01 kV  peak -40.3 kV delay 2.3685980384552103e-06
+  v2c_Rc1M_Rx300k_400Hz_burst ok=True 22s
+    v2c_Rc1M_Rx300k_600Hz_burst shot 0: V_Cb start -4.00 end -5.67 next -3.80 kV VC3 next +0.20 kV  peak -40.2 kV delay 2.3686050965480154e-06
+    v2c_Rc1M_Rx300k_600Hz_burst shot 1: V_Cb start -3.80 end -5.62 next -3.81 kV VC3 next +0.19 kV  peak -40.5 kV delay 2.3686294870988966e-06
+    v2c_Rc1M_Rx300k_600Hz_burst shot 2: V_Cb start -3.81 end -5.65 next -3.81 kV VC3 next +0.19 kV  peak -40.5 kV delay 2.3686249599406763e-06
+    v2c_Rc1M_Rx300k_600Hz_burst shot 3: V_Cb start -3.81 end -5.62 next -3.81 kV VC3 next +0.19 kV  peak -40.4 kV delay 2.3686703479367176e-06
+    v2c_Rc1M_Rx300k_600Hz_burst shot 4: V_Cb start -3.81 end -5.65 next -3.81 kV VC3 next +0.19 kV  peak -40.5 kV delay 2.3686269939918977e-06
+    v2c_Rc1M_Rx300k_600Hz_burst shot 5: V_Cb start -3.81 end -5.62 next -3.81 kV VC3 next +0.19 kV  peak -40.4 kV delay 2.3686660321057304e-06
+  v2c_Rc1M_Rx300k_600Hz_burst ok=True 32s
+    v2c_Rc1M_Rx100k_150Hz shot 0: V_Cb start -4.00 end -5.36 next -4.00 kV VC3 next +0.00 kV  peak -40.2 kV delay 2.368605390806382e-06
+    v2c_Rc1M_Rx100k_150Hz shot 1: V_Cb start -4.00 end -5.39 next -4.00 kV VC3 next +0.00 kV  peak -40.2 kV delay 2.3686107301353104e-06
+    v2c_Rc1M_Rx100k_150Hz shot 2: V_Cb start -4.00 end -5.38 next -4.00 kV VC3 next +0.00 kV  peak -40.2 kV delay 2.3686098888894455e-06
+    v2c_Rc1M_Rx100k_150Hz shot 3: V_Cb start -4.00 end -5.36 next -4.00 kV VC3 next +0.00 kV  peak -40.2 kV delay 2.3686113736932128e-06
+    v2c_Rc1M_Rx100k_150Hz shot 4: V_Cb start -4.00 end -5.38 next -4.00 kV VC3 next +0.00 kV  peak -40.2 kV delay 2.368610147194639e-06
+    v2c_Rc1M_Rx100k_150Hz shot 5: V_Cb start -4.00 end -5.37 next -4.00 kV VC3 next +0.00 kV  peak -40.2 kV delay 2.3686109729164474e-06
+    v2c_Rc1M_Rx100k_150Hz shot 6: V_Cb start -4.00 end -5.38 next -4.00 kV VC3 next +0.00 kV  peak -40.2 kV delay 2.3686099521321297e-06
+    v2c_Rc1M_Rx100k_150Hz shot 7: V_Cb start -4.00 end -5.36 next -4.00 kV VC3 next +0.00 kV  peak -40.2 kV delay 2.368612235200846e-06
+  v2c_Rc1M_Rx100k_150Hz ok=True 30s
+    v2c_Rc1M_Rx100k_200Hz_burst shot 0: V_Cb start -4.00 end -5.36 next -4.00 kV VC3 next +0.00 kV  peak -40.2 kV delay 2.368605390806382e-06
+    v2c_Rc1M_Rx100k_200Hz_burst shot 1: V_Cb start -4.00 end -5.38 next -4.00 kV VC3 next +0.00 kV  peak -40.2 kV delay 2.3686124402912835e-06
+    v2c_Rc1M_Rx100k_200Hz_burst shot 2: V_Cb start -4.00 end -5.38 next -4.00 kV VC3 next +0.00 kV  peak -40.2 kV delay 2.3686124404828917e-06
+    v2c_Rc1M_Rx100k_200Hz_burst shot 3: V_Cb start -4.00 end -5.38 next -4.00 kV VC3 next +0.00 kV  peak -40.2 kV delay 2.3686124404828917e-06
+    v2c_Rc1M_Rx100k_200Hz_burst shot 4: V_Cb start -4.00 end -5.38 next -4.00 kV VC3 next +0.00 kV  peak -40.2 kV delay 2.3686124404828917e-06
+    v2c_Rc1M_Rx100k_200Hz_burst shot 5: V_Cb start -4.00 end -5.38 next -4.00 kV VC3 next +0.00 kV  peak -40.2 kV delay 2.3686124404828917e-06
+  v2c_Rc1M_Rx100k_200Hz_burst ok=True 22s
+    v2c_Rc1M_Rx100k_300Hz_burst shot 0: V_Cb start -4.00 end -5.36 next -4.00 kV VC3 next -0.00 kV  peak -40.2 kV delay 2.368605390806382e-06
+    v2c_Rc1M_Rx100k_300Hz_burst shot 1: V_Cb start -4.00 end -5.39 next -4.00 kV VC3 next -0.00 kV  peak -40.2 kV delay 2.368604644555137e-06
+    v2c_Rc1M_Rx100k_300Hz_burst shot 2: V_Cb start -4.00 end -5.38 next -4.00 kV VC3 next -0.00 kV  peak -40.2 kV delay 2.368609069971663e-06
+    v2c_Rc1M_Rx100k_300Hz_burst shot 3: V_Cb start -4.00 end -5.39 next -4.00 kV VC3 next -0.00 kV  peak -40.2 kV delay 2.3686046414809663e-06
+    v2c_Rc1M_Rx100k_300Hz_burst shot 4: V_Cb start -4.00 end -5.39 next -4.00 kV VC3 next -0.00 kV  peak -40.2 kV delay 2.368604644484796e-06
+    v2c_Rc1M_Rx100k_300Hz_burst shot 5: V_Cb start -4.00 end -5.39 next -4.00 kV VC3 next -0.00 kV  peak -40.2 kV delay 2.3686046435682334e-06
+  v2c_Rc1M_Rx100k_300Hz_burst ok=True 22s
+    v2c_Rc1M_Rx100k_400Hz_burst shot 0: V_Cb start -4.00 end -5.36 next -4.00 kV VC3 next -0.00 kV  peak -40.2 kV delay 2.368605390806382e-06
+    v2c_Rc1M_Rx100k_400Hz_burst shot 1: V_Cb start -4.00 end -5.38 next -4.00 kV VC3 next -0.00 kV  peak -40.2 kV delay 2.3686040156248498e-06
+    v2c_Rc1M_Rx100k_400Hz_burst shot 2: V_Cb start -4.00 end -5.38 next -4.00 kV VC3 next -0.00 kV  peak -40.2 kV delay 2.3686040164997154e-06
+    v2c_Rc1M_Rx100k_400Hz_burst shot 3: V_Cb start -4.00 end -5.38 next -4.00 kV VC3 next -0.00 kV  peak -40.2 kV delay 2.368604016521531e-06
+    v2c_Rc1M_Rx100k_400Hz_burst shot 4: V_Cb start -4.00 end -5.38 next -4.00 kV VC3 next -0.00 kV  peak -40.2 kV delay 2.368604016521531e-06
+    v2c_Rc1M_Rx100k_400Hz_burst shot 5: V_Cb start -4.00 end -5.38 next -4.00 kV VC3 next -0.00 kV  peak -40.2 kV delay 2.368604016521531e-06
+  v2c_Rc1M_Rx100k_400Hz_burst ok=True 22s
+    v2c_Rc1M_Rx100k_600Hz_burst shot 0: V_Cb start -4.00 end -5.36 next -4.00 kV VC3 next +0.00 kV  peak -40.2 kV delay 2.368605390806382e-06
+    v2c_Rc1M_Rx100k_600Hz_burst shot 1: V_Cb start -4.00 end -5.40 next -4.00 kV VC3 next +0.00 kV  peak -40.2 kV delay 2.3686003138075204e-06
+    v2c_Rc1M_Rx100k_600Hz_burst shot 2: V_Cb start -4.00 end -5.40 next -4.00 kV VC3 next +0.00 kV  peak -40.2 kV delay 2.368600272633892e-06
+    v2c_Rc1M_Rx100k_600Hz_burst shot 3: V_Cb start -4.00 end -5.40 next -4.00 kV VC3 next +0.00 kV  peak -40.2 kV delay 2.3686002735803795e-06
+    v2c_Rc1M_Rx100k_600Hz_burst shot 4: V_Cb start -4.00 end -5.40 next -4.00 kV VC3 next +0.00 kV  peak -40.2 kV delay 2.36860027350808e-06
+    v2c_Rc1M_Rx100k_600Hz_burst shot 5: V_Cb start -4.00 end -5.40 next -4.00 kV VC3 next +0.00 kV  peak -40.2 kV delay 2.36860027350808e-06
+  v2c_Rc1M_Rx100k_600Hz_burst ok=True 22s
+    v2c_lossless_Rx100k_150Hz shot 0: V_Cb start -4.00 end -5.36 next -4.00 kV VC3 next -0.00 kV  peak -40.2 kV delay 2.368605390806382e-06
+    v2c_lossless_Rx100k_150Hz shot 1: V_Cb start -4.00 end -5.37 next -4.00 kV VC3 next -0.00 kV  peak -40.2 kV delay 2.368607929014396e-06
+    v2c_lossless_Rx100k_150Hz shot 2: V_Cb start -4.00 end -5.37 next -4.00 kV VC3 next -0.00 kV  peak -40.2 kV delay 2.368607619822016e-06
+    v2c_lossless_Rx100k_150Hz shot 3: V_Cb start -4.00 end -5.37 next -4.00 kV VC3 next -0.00 kV  peak -40.2 kV delay 2.3686077547605827e-06
+    v2c_lossless_Rx100k_150Hz shot 4: V_Cb start -4.00 end -5.37 next -4.00 kV VC3 next -0.00 kV  peak -40.2 kV delay 2.368607717026959e-06
+    v2c_lossless_Rx100k_150Hz shot 5: V_Cb start -4.00 end -5.37 next -4.00 kV VC3 next -0.00 kV  peak -40.2 kV delay 2.368607751702834e-06
+    v2c_lossless_Rx100k_150Hz shot 6: V_Cb start -4.00 end -5.37 next -4.00 kV VC3 next -0.00 kV  peak -40.2 kV delay 2.368607744474217e-06
+    v2c_lossless_Rx100k_150Hz shot 7: V_Cb start -4.00 end -5.37 next -4.00 kV VC3 next -0.00 kV  peak -40.2 kV delay 2.368607778007125e-06
+  v2c_lossless_Rx100k_150Hz ok=True 30s
+    v2c_lossless_Rx100k_200Hz_burst shot 0: V_Cb start -4.00 end -5.36 next -4.00 kV VC3 next +0.00 kV  peak -40.2 kV delay 2.368605390806382e-06
+    v2c_lossless_Rx100k_200Hz_burst shot 1: V_Cb start -4.00 end -5.38 next -4.00 kV VC3 next +0.00 kV  peak -40.2 kV delay 2.368612429869842e-06
+    v2c_lossless_Rx100k_200Hz_burst shot 2: V_Cb start -4.00 end -5.38 next -4.00 kV VC3 next +0.00 kV  peak -40.2 kV delay 2.3686124305359407e-06
+    v2c_lossless_Rx100k_200Hz_burst shot 3: V_Cb start -4.00 end -5.38 next -4.00 kV VC3 next +0.00 kV  peak -40.2 kV delay 2.368612429691003e-06
+    v2c_lossless_Rx100k_200Hz_burst shot 4: V_Cb start -4.00 end -5.38 next -4.00 kV VC3 next +0.00 kV  peak -40.2 kV delay 2.3686124305359407e-06
+    v2c_lossless_Rx100k_200Hz_burst shot 5: V_Cb start -4.00 end -5.38 next -4.00 kV VC3 next +0.00 kV  peak -40.2 kV delay 2.368612429691003e-06
+  v2c_lossless_Rx100k_200Hz_burst ok=True 22s
+    v2c_lossless_Rx100k_300Hz_burst shot 0: V_Cb start -4.00 end -5.36 next -4.00 kV VC3 next -0.00 kV  peak -40.2 kV delay 2.368605390806382e-06
+    v2c_lossless_Rx100k_300Hz_burst shot 1: V_Cb start -4.00 end -5.36 next -4.00 kV VC3 next -0.00 kV  peak -40.2 kV delay 2.3686061067077714e-06
+    v2c_lossless_Rx100k_300Hz_burst shot 2: V_Cb start -4.00 end -5.36 next -4.00 kV VC3 next -0.00 kV  peak -40.2 kV delay 2.3686061063981525e-06
+    v2c_lossless_Rx100k_300Hz_burst shot 3: V_Cb start -4.00 end -5.36 next -4.00 kV VC3 next -0.00 kV  peak -40.2 kV delay 2.3686061063981525e-06
+    v2c_lossless_Rx100k_300Hz_burst shot 4: V_Cb start -4.00 end -5.36 next -4.00 kV VC3 next -0.00 kV  peak -40.2 kV delay 2.3686061063981525e-06
+    v2c_lossless_Rx100k_300Hz_burst shot 5: V_Cb start -4.00 end -5.36 next -4.00 kV VC3 next -0.00 kV  peak -40.2 kV delay 2.3686061063981525e-06
+  v2c_lossless_Rx100k_300Hz_burst ok=True 22s
+    v2c_lossless_Rx100k_400Hz_burst shot 0: V_Cb start -4.00 end -5.36 next -4.00 kV VC3 next -0.00 kV  peak -40.2 kV delay 2.368605390806382e-06
+    v2c_lossless_Rx100k_400Hz_burst shot 1: V_Cb start -4.00 end -5.35 next -4.00 kV VC3 next -0.00 kV  peak -40.2 kV delay 2.3686040668276475e-06
+    v2c_lossless_Rx100k_400Hz_burst shot 2: V_Cb start -4.00 end -5.35 next -4.00 kV VC3 next -0.00 kV  peak -40.2 kV delay 2.3686040663015215e-06
+    v2c_lossless_Rx100k_400Hz_burst shot 3: V_Cb start -4.00 end -5.35 next -4.00 kV VC3 next -0.00 kV  peak -40.2 kV delay 2.368604066114368e-06
+    v2c_lossless_Rx100k_400Hz_burst shot 4: V_Cb start -4.00 end -5.35 next -4.00 kV VC3 next -0.00 kV  peak -40.2 kV delay 2.368604065928616e-06
+    v2c_lossless_Rx100k_400Hz_burst shot 5: V_Cb start -4.00 end -5.35 next -4.00 kV VC3 next -0.00 kV  peak -40.2 kV delay 2.368604066350048e-06
+  v2c_lossless_Rx100k_400Hz_burst ok=True 22s
+    v2c_lossless_Rx100k_600Hz_burst shot 0: V_Cb start -4.00 end -5.36 next -3.99 kV VC3 next +0.01 kV  peak -40.2 kV delay 2.368605390806382e-06
+    v2c_lossless_Rx100k_600Hz_burst shot 1: V_Cb start -3.99 end -5.39 next -3.99 kV VC3 next +0.01 kV  peak -40.2 kV delay 2.3685966515814486e-06
+    v2c_lossless_Rx100k_600Hz_burst shot 2: V_Cb start -3.99 end -5.33 next -3.99 kV VC3 next +0.01 kV  peak -40.2 kV delay 2.368592157080519e-06
+    v2c_lossless_Rx100k_600Hz_burst shot 3: V_Cb start -3.99 end -5.29 next -3.99 kV VC3 next +0.01 kV  peak -40.2 kV delay 2.3685984955279216e-06
+    v2c_lossless_Rx100k_600Hz_burst shot 4: V_Cb start -3.99 end -5.38 next -3.99 kV VC3 next +0.01 kV  peak -40.2 kV delay 2.3685995064783104e-06
+    v2c_lossless_Rx100k_600Hz_burst shot 5: V_Cb start -3.99 end -5.35 next -3.99 kV VC3 next +0.01 kV  peak -40.2 kV delay 2.3686004167013783e-06
+  v2c_lossless_Rx100k_600Hz_burst ok=True 22s

@@ -1,0 +1,17 @@
+  v2m_eddy_holddown_R100_L0.0001_C2e-09_q1_rb2.1               ok=True Vpk_nobd=-50.9kV Vmax_q=2.1kV fires=True delay=2.374081950872649e-06 Ech_frac=0.9105068105953344 14s
+  v2m_eddy_holddown_R100_L0.0001_C2e-09_q1_rb6                 ok=True Vpk_nobd=-50.9kV Vmax_q=6.0kV fires=True delay=2.3819488983012855e-06 Ech_frac=0.9116242177930023 14s
+  v2m_eddy_holddown_R100_L0.0001_C2e-09_q1_rb12                ok=True Vpk_nobd=-50.9kV Vmax_q=11.9kV fires=True delay=2.4247552780284563e-06 Ech_frac=0.9102718093829839 13s
+  v2m_eddy_holddown_R100_L0.0001_C2e-09_q1_norb                ok=True Vpk_nobd=-50.9kV Vmax_q=19.0kV fires=True delay=2.5464729007282154e-06 Ech_frac=0.006501237382918218 8s
+  v2m_eddy_holddown_R100_L1e-05_C5e-09_q0.5_norb               ok=True Vpk_nobd=-50.9kV Vmax_q=13.4kV fires=False delay=None Ech_frac=0.005690996302816338 7s
+  v2m_eddy_holddown_R100_L1e-05_C1e-08_q1_rb2.1                ok=True Vpk_nobd=-50.9kV Vmax_q=2.1kV fires=True delay=2.3813350971951396e-06 Ech_frac=0.911269730727702 13s
+  v2m_eddy_holddown_R100_L1e-05_C1e-08_q1_rb6                  ok=True Vpk_nobd=-50.9kV Vmax_q=6.0kV fires=True delay=2.385737491619315e-06 Ech_frac=0.9103244871979961 14s
+  v2m_eddy_holddown_R100_L1e-05_C1e-08_q1_rb12                 ok=True Vpk_nobd=-50.9kV Vmax_q=11.5kV fires=True delay=2.437426871478172e-06 Ech_frac=0.9120243237383877 14s
+  v2m_eddy_holddown_R100_L1e-05_C1e-08_q1_norb                 ok=True Vpk_nobd=-50.9kV Vmax_q=12.8kV fires=False delay=None Ech_frac=0.007821169987268221 8s
+  v2m_eddy_crowbar_t_fire3e-06_Rd2_q1_rb2.1                    ok=True Vpk_nobd=-51.1kV Vmax_q=2.1kV fires=True delay=2.381459634298561e-06 Ech_frac=0.9139758060076939 6s
+  v2m_eddy_crowbar_t_fire3e-06_Rd2_q1_rb6                      ok=True Vpk_nobd=-51.1kV Vmax_q=2.6kV fires=True delay=2.3931883204930657e-06 Ech_frac=0.9154881320464583 6s
+  v2m_eddy_crowbar_t_fire3e-06_Rd2_q1_rb12                     ok=True Vpk_nobd=-51.1kV Vmax_q=12.0kV fires=True delay=2.7419790041533797e-06 Ech_frac=0.9154407609293372 6s
+  v2m_eddy_crowbar_t_fire3e-06_Rd2_q1_norb                     ok=True Vpk_nobd=-51.1kV Vmax_q=15.3kV fires=True delay=4.139807402523644e-06 Ech_frac=0.006165560579486695 3s
+  v2m_eddy_kick_t_fire2e-06_I15_w3e-07_q1_rb2.1                ok=True Vpk_nobd=-51.1kV Vmax_q=2.1kV fires=True delay=2.38145803509463e-06 Ech_frac=0.9139756830473104 6s
+  v2m_eddy_kick_t_fire2e-06_I15_w3e-07_q1_rb6                  ok=True Vpk_nobd=-51.1kV Vmax_q=2.6kV fires=True delay=2.393163586511302e-06 Ech_frac=0.9152407915900428 5s
+  v2m_eddy_kick_t_fire2e-06_I15_w3e-07_q1_rb12                 ok=True Vpk_nobd=-51.1kV Vmax_q=3.7kV fires=True delay=2.639482876537909e-06 Ech_frac=0.9491621956302326 6s
+  v2m_eddy_kick_t_fire2e-06_I15_w3e-07_q1_norb                 ok=True Vpk_nobd=-51.1kV Vmax_q=38.1kV fires=True delay=2.3214915639507027e-06 Ech_frac=0.006166051277061345 3s

@@ -1,0 +1,34 @@
+  v2m_eddy_rclamp_X4400_Ron2_normal                            ok=True Vpk_nobd=-50.1kV Vmax_q=0.0kV fires=True delay=2.3710070570370225e-06 Ech_frac=0.9137429122459357 3s
+  v2m_eddy_rclamp_X4400_Ron2_q1_rb2.1                          ok=True Vpk_nobd=-50.1kV Vmax_q=2.1kV fires=True delay=2.3822445016730475e-06 Ech_frac=0.9128500525534365 6s
+  v2m_eddy_rclamp_X4400_Ron2_q1_rb6                            ok=True Vpk_nobd=-50.1kV Vmax_q=2.7kV fires=True delay=2.396156091129835e-06 Ech_frac=0.9118033636421886 6s
+  v2m_eddy_rclamp_X4400_Ron2_q1_rb12                           ok=True Vpk_nobd=-50.1kV Vmax_q=5.4kV fires=False delay=None Ech_frac=0.00609888332389838 3s
+  v2m_eddy_rclamp_X4400_Ron2_q1_norb                           ok=True Vpk_nobd=-50.1kV Vmax_q=5.4kV fires=False delay=None Ech_frac=0.00609888332389838 3s
+  v2m_eddy_rclamp_X5000_Ron2_normal                            ok=True Vpk_nobd=-50.1kV Vmax_q=0.0kV fires=True delay=2.371007058149567e-06 Ech_frac=0.9137432864074592 3s
+  v2m_eddy_rclamp_X5000_Ron2_q1_rb2.1                          ok=True Vpk_nobd=-50.1kV Vmax_q=2.1kV fires=True delay=2.382244500882761e-06 Ech_frac=0.9128500544851315 6s
+  v2m_eddy_rclamp_X5000_Ron2_q1_rb6                            ok=True Vpk_nobd=-50.1kV Vmax_q=2.7kV fires=True delay=2.3961560834585634e-06 Ech_frac=0.9116874000720214 6s
+  v2m_eddy_rclamp_X5000_Ron2_q1_rb12                           ok=True Vpk_nobd=-50.1kV Vmax_q=5.9kV fires=False delay=None Ech_frac=0.006098944433165943 3s
+  v2m_eddy_rclamp_X5000_Ron2_q1_norb                           ok=True Vpk_nobd=-50.1kV Vmax_q=5.9kV fires=False delay=None Ech_frac=0.006098944433165943 3s
+  v2m_eddy_rclamp_X6000_Ron2_normal                            ok=True Vpk_nobd=-50.1kV Vmax_q=0.0kV fires=True delay=2.3710070573983184e-06 Ech_frac=0.9137429470437736 3s
+  v2m_eddy_rclamp_X6000_Ron2_q1_rb2.1                          ok=True Vpk_nobd=-50.1kV Vmax_q=2.1kV fires=True delay=2.382244501525109e-06 Ech_frac=0.9128500529128571 6s
+  v2m_eddy_rclamp_X6000_Ron2_q1_rb6                            ok=True Vpk_nobd=-50.1kV Vmax_q=2.7kV fires=True delay=2.396156096611824e-06 Ech_frac=0.9118280455823831 6s
+  v2m_eddy_rclamp_X6000_Ron2_q1_rb12                           ok=True Vpk_nobd=-50.1kV Vmax_q=6.7kV fires=False delay=None Ech_frac=0.006098946883331249 3s
+  v2m_eddy_rclamp_X6000_Ron2_q1_norb                           ok=True Vpk_nobd=-50.1kV Vmax_q=6.7kV fires=False delay=None Ech_frac=0.006098946883331249 3s
+  v2m_eddy_rclamp_X4400_Ron10_normal                           ok=True Vpk_nobd=-50.1kV Vmax_q=0.0kV fires=True delay=2.3710070570370225e-06 Ech_frac=0.9137429122459357 3s
+  v2m_eddy_rclamp_X4400_Ron10_q1_rb2.1                         ok=True Vpk_nobd=-50.1kV Vmax_q=2.1kV fires=True delay=2.3822445016730475e-06 Ech_frac=0.9128500525534365 6s
+  v2m_eddy_rclamp_X4400_Ron10_q1_rb6                           ok=True Vpk_nobd=-50.1kV Vmax_q=2.7kV fires=True delay=2.396156091129835e-06 Ech_frac=0.9118033636421886 6s
+  v2m_eddy_rclamp_X4400_Ron10_q1_rb12                          ok=True Vpk_nobd=-50.1kV Vmax_q=7.7kV fires=False delay=None Ech_frac=0.006098901821615009 3s
+  v2m_eddy_rclamp_X4400_Ron10_q1_norb                          ok=True Vpk_nobd=-50.1kV Vmax_q=7.7kV fires=False delay=None Ech_frac=0.006098901821615009 3s
+  v2m_ttu_rclamp_X4400_Ron2_normal                             ok=True Vpk_nobd=-50.3kV Vmax_q=0.0kV fires=True delay=2.545084562668776e-06 Ech_frac=0.7781299068314772 3s
+  v2m_ttu_rclamp_X4400_Ron2_q1_rb2.1                           ok=True Vpk_nobd=-50.3kV Vmax_q=2.1kV fires=True delay=2.5466099156478387e-06 Ech_frac=0.7779547664934501 7s
+  v2m_ttu_rclamp_X4400_Ron2_q1_rb6                             ok=True Vpk_nobd=-50.3kV Vmax_q=4.4kV fires=True delay=2.589199076343623e-06 Ech_frac=0.7775007157165162 7s
+  v2m_ttu_rclamp_X4400_Ron2_q1_rb12                            ok=True Vpk_nobd=-50.3kV Vmax_q=5.4kV fires=False delay=None Ech_frac=0.006169901381899087 3s
+  v2m_ttu_rclamp_X4400_Ron2_q1_norb                            ok=True Vpk_nobd=-50.3kV Vmax_q=5.4kV fires=False delay=None Ech_frac=0.006169901381899087 3s
+  v2m_ttu_rclamp_X5000_Ron2_normal                             ok=True Vpk_nobd=-50.3kV Vmax_q=0.0kV fires=True delay=2.545084565014492e-06 Ech_frac=0.7781296934480038 4s
+  v2m_ttu_rclamp_X5000_Ron2_q1_rb2.1                           ok=True Vpk_nobd=-50.3kV Vmax_q=2.1kV fires=True delay=2.546609919061821e-06 Ech_frac=0.7779534806433808 7s
+  v2m_ttu_rclamp_X5000_Ron2_q1_rb6                             ok=True Vpk_nobd=-50.3kV Vmax_q=5.0kV fires=True delay=2.591631305130867e-06 Ech_frac=0.7799687002808673 7s
+  v2m_ttu_rclamp_X5000_Ron2_q1_rb12                            ok=True Vpk_nobd=-50.3kV Vmax_q=6.0kV fires=False delay=None Ech_frac=0.006169933638041317 3s
+  v2m_ttu_rclamp_X5000_Ron2_q1_norb                            ok=True Vpk_nobd=-50.3kV Vmax_q=6.0kV fires=False delay=None Ech_frac=0.006169933638041317 3s
+/workspace/prs/sim/plots/09_quench_mitigations.png
+/workspace/prs/sim/plots/10_sr3_ferrite.png
+/workspace/prs/sim/plots/11_cblock_multishot.png
+/workspace/prs/sim/plots/12_cblock_recovery_waveforms.png

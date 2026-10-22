@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+
+# Simulation outputs (regenerated)
+sim/out/
+*.raw
+*.op.raw
+# keep committed run logs in sim/results/, sim/ltspice/runs/ and sim/*.log
+
+# Large data
+*.h5
+*.hdf5
+*.npz
+*.npy
+*.zip
+*.tar.gz
+
+# Third-party tools / binaries / models (not redistributed)
+sim/xyce/
+sim/ttu/
+sim/ltspice/app/
+sim/ltspice/x/
+*.exe
+*.msi
+*.sub
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
