@@ -1,0 +1,26 @@
+* Plasma Ignition Rev B  blocks=stage2  model=eddy
+.options method=gear reltol=1e-4 abstol=1e-9 vntol=1e-4 itl4=200 maxord=2
+C0b bk 0 3.15933e-08 IC=5626.03
+C_plug P 0 1.5e-11 IC=5626.03
+* SRiso model=eddy N=6 Ae=0.0010626721829676195 le=0.22 VS=0.012752066195611434 (dB=2.000 T)
+L_iso_air bk iso_m 3.48802e-07
+C_iso_w bk cw_s 1.5e-12
+V_iso_cw cw_s P 0
+G_iso_lam 0 lam_iso iso_m P 1
+C_iso_lam lam_iso 0 1
+R_iso_lam lam_iso 0 1e15
+B_iso_core iso_m P I = 0.0366667*(2.5*tanh((v(iso_m,P)/0.00637603)/0.01e6) + 4.5e-05*(v(iso_m,P)/0.00637603)) + (1/2e-09)*((uramp(((v(lam_iso)+0.0015)-0.0127521)) + 2.550413239122287e-05*ln(1+exp(-abs(((v(lam_iso)+0.0015)-0.0127521))/2.550413239122287e-05))) - (uramp((-(v(lam_iso)+0.0015)-0.000255041)) + 2.550413239122287e-05*ln(1+exp(-abs((-(v(lam_iso)+0.0015)-0.000255041))/2.550413239122287e-05))) + 1.15786e-09)
+
+V_chg chg 0 PWL(0.000000e+00 0 1.000000e-09 0 2.000000e-09 1)
+B_ch P 0 I = v(P)*(v(chg)/1 + 1/1e+09)
+
+
+.control
+set wr_singlescale
+set wr_vecnames
+option numdgt=9
+tran 0.05n 1.400000e-05 0 2.500e-10 uic
+wrdata /workspace/plasma-ignition/sim/out/revc_st2_eddy_a0.dat v(P) v(bk) v(lam_iso) i(L_iso_air) i(V_iso_cw) v(chg) v(iso_m)
+quit
+.endc
+.end

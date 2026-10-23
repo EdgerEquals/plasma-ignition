@@ -18,6 +18,8 @@ The work is first-pass engineering analysis. The numbers are simulation results 
 
 The full write-up, with the validation table, method, results and limitations, is in [`sim/RevB_simulation_report.md`](sim/RevB_simulation_report.md). The design numbers are in [`PRS_RevB_architecture_proposal.md`](PRS_RevB_architecture_proposal.md).
 
+Rev C holds that topology and sizes by margin only. The note is [`sim/RevC_design_out_by_margin.md`](sim/RevC_design_out_by_margin.md). The short reply is [`sim/RevC_reply.md`](sim/RevC_reply.md). The study is `python sim/run_revc.py` (ngspice). Chosen bank is 5.63 kV / 63.2 nF / 1.0 J. Do not quote the abandoned 38.6 nF auto-size still sitting in `sim/results/revc/revc_summary.json`.
+
 ## Tools
 
 - **ngspice + Python** is the primary engine. It builds netlists, runs batches and post-processes the results.
@@ -32,6 +34,7 @@ python run_all.py            # base Rev B study (validation, sweeps, quench, jit
 python run_all.py --no-lt --no-xyce   # ngspice only
 python run_v2.py             # follow-up: quench mitigation, SR3 ferrite, DC-block recovery
 python run_v2.py --items 2   # run a single follow-up item
+python run_revc.py           # Rev C margin study (ngspice). See RevC_design_out_by_margin.md
 ```
 
 ### Dependencies
