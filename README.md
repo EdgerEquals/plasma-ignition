@@ -26,22 +26,28 @@ The full write-up, with the validation table, method, results and limitations, i
 
 ## Running
 
+A fresh clone does not contain ngspice, Wine, LTspice, Xyce, or `sim/out/`. The committed results and plots are the snapshot behind the report. `sim/out/` is gitignored. On the machine that produced the tables it was about 6 GB after the v2 prune, and it is not in this checkout. The checkpoints store metrics, not waveforms.
+
+The published numbers were produced with ngspice 44.2, LTspice 26.1.1 under Wine 10, and Xyce 7.9. A later check of the stage-1 ideal-SR3 waveform and the quench node peak used ngspice 42 and reproduced the saved metrics that were rechecked.
+
 ```bash
+sudo apt install ngspice python3-numpy python3-matplotlib
 cd sim
-python run_all.py            # base Rev B study (validation, sweeps, quench, jitter, plots)
-python run_all.py --no-lt --no-xyce   # ngspice only
-python run_v2.py             # follow-up: quench mitigation, SR3 ferrite, DC-block recovery
-python run_v2.py --items 2   # run a single follow-up item
+python3 run_all.py --no-lt --no-xyce   # ngspice study: validation, sweeps, quench, jitter, plots
+python3 run_v2.py                       # follow-up: quench mitigation, SR3 ferrite, DC-block recovery
+python3 run_v2.py --items 2             # one follow-up item
 ```
+
+`python3 run_all.py` with no flags also starts the LTspice and Xyce cross-checks, and stops if those tools are absent.
 
 ### Dependencies
 
 - Python 3 with `numpy` and `matplotlib`.
-- `ngspice` on `PATH`.
+- `ngspice` on `PATH` for any rerun.
 - Optional, for the LTspice cross-check:
-  - Wine and the LTspice Windows build, unpacked to `sim/ltspice/app/LTspice/` (not included).
-  - The TTU core model, which is not redistributed here. Download it from https://www.p3e.ttu.edu/BehavioralMagneticCoreLTspice and save `Core_Model.sub` as `sim/ttu/Core_Model_recentred.sub`, applying the B-axis re-centring described in the report. A Python port of the model's equations for ngspice is in `prs_model.py` (`model="ttu"`).
-- Optional, for the tie-break: Xyce, built to `sim/xyce/install/bin/Xyce` (not included).
+  - Wine, and the LTspice Windows build unpacked so that `sim/ltspice/app/LTspice/LTspice.exe` exists (`sim/ltspice/app/` is gitignored).
+  - The TTU core model, which is not redistributed here. Download it from https://www.p3e.ttu.edu/BehavioralMagneticCoreLTspice and save `Core_Model.sub` as `sim/ttu/Core_Model_recentred.sub`, applying the B-axis re-centring described in the report. `sim/ttu/` and `*.sub` are gitignored. A Python port of the model's equations for ngspice is in `prs_model.py` (`model="ttu"`).
+- Optional, for the tie-break: Xyce, built to `sim/xyce/install/bin/Xyce` (`sim/xyce/` is gitignored). If a prebuilt Xyce fails to start because `libamd.so.3` is missing, install the SuiteSparse AMD library (`apt install libamd3` on Debian/Ubuntu).
 
 ## Layout
 

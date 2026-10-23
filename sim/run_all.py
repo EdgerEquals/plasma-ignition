@@ -279,7 +279,7 @@ def make_plots(rows, s1, st2, deliv, results, waves, only=None):
                 axs[0, j].plot((rr["t"]-tb)*1e6, rr["v(P)"]/1e3, label=f"R={R}", lw=0.8)
                 axs[1, j].plot((rr["t"]-tb)*1e6, (rr["v(bk)"]-rr["v(P)"])/1e3, label=f"R={R}", lw=0.8)
             axs[0, j].set_ylim(-3, 5); axs[1, j].set_ylim(-3, 6)
-            axs[0, j].set_title(f"plug node, breakdown {'27.5 kV (rising edge)' if bd=='bd27k5' else 'at peak (~-55 kV)'}")
+            axs[0, j].set_title(f"plug node, breakdown {'27.5 kV (rising edge)' if bd=='bd27k5' else 'at peak (about -51 kV)'}")
             axs[1, j].set_title("voltage across SRiso (bank - node)")
             axs[1, j].set_xlabel("t - t_breakdown [us]"); axs[1, j].set_xlim(-0.05, 4)
             for x in axs[:, j]: x.grid(); x.legend(); x.set_ylabel("kV")
@@ -294,7 +294,7 @@ def make_plots(rows, s1, st2, deliv, results, waves, only=None):
             ax[0].plot((rr["t"]-tb)*1e6, rr["i(L_iso_air)"]/1e3, label=f"R={R}", lw=0.9)
             ax[1].plot((rr["t"]-tb)*1e6, rr["v(bk)"]/1e3, label=f"R={R}", lw=0.9)
         ax[0].set_ylabel("SRiso current [kA]"); ax[1].set_ylabel("C0b [kV]"); ax[1].set_xlabel("t - t_breakdown [us]")
-        ax[0].set_title("Full chain, 62.5 nF, breakdown 27.5 kV: stage-2 current and bank reversal (alternating tail)")
+        ax[0].set_title("Full chain, 62.5 nF, breakdown 27.5 kV: stage-2 current and bank\n(second half-cycle at 0.5 and 1 ohm; none at 2 ohm within 13 us)")
         for x in ax: x.grid(); x.legend()
         fig.tight_layout(); fig.savefig(os.path.join(PLOTS, "04_fullchain_stage2_current_bank.png"), dpi=110); plt.close(fig)
     if want(5):
@@ -314,7 +314,7 @@ def make_plots(rows, s1, st2, deliv, results, waves, only=None):
             ax[2, j].plot(x, rr["v(lam_iso)"]*1e3, "k:", lw=0.8)
             ax[2, j].axhline(m.P["VSiso"]*1e3, color="r", ls="--", lw=0.7)
             ax[0, j].set_title("Quench, hot-channel re-break at |V| > 2.1 kV" if rb == "rb" else "Quench, no re-break (channel cold)")
-            ax[0, j].set_ylim(-15, 15); ax[1, j].set_ylim(-15, 15)
+            ax[0, j].set_ylim(-18, 18); ax[1, j].set_ylim(-16, 16)
             ax[0, j].set_ylabel("plug node [kV]"); ax[1, j].set_ylabel("V across SRiso [kV]"); ax[2, j].set_ylabel("SRiso flux [mV.s]")
             ax[2, j].set_xlabel("t - t_breakdown [us]"); ax[2, j].set_xlim(-0.1, 6)
             for a_ in ax[:, j]: a_.grid()
@@ -367,7 +367,7 @@ def make_plots(rows, s1, st2, deliv, results, waves, only=None):
         fig.tight_layout(); fig.savefig(os.path.join(PLOTS, "07_summary_delivery_delay.png"), dpi=110); plt.close(fig)
     if want(8):
         # jitter + dB
-        fig, ax = plt.subplots(1, 2, figsize=(12, 4.2))
+        fig, ax = plt.subplots(1, 2, figsize=(13, 5.0))
         dd = [x for x in results if x["tag"].startswith("dB_") and x["ok"]]
         for bd, mk in (("bd27k5", "o-"), ("bdpeak", "s-")):
             s = sorted([x for x in dd if x["tag"].endswith(bd)], key=lambda x: x["dB"])
@@ -378,7 +378,8 @@ def make_plots(rows, s1, st2, deliv, results, waves, only=None):
         labs = [f"{x['jit_ref']}\n{x['jit_dVs']*1e3:+.3f} mV.s" for x in jj]
         ref = {"sim spike, bd 27.5 kV": "base_bd27k5_C625_R1.0", "doc 1.2 mV.s": "base_bd27k5_C625_R1.0", "sim spike, bd at peak": "base_bdpeak_C625_R1.0"}
         vals = [(x["delay"] - [y for y in results if y["tag"] == ref[x["jit_ref"]]][0]["delay"])*1e9 for x in jj]
-        ax[1].bar(range(len(vals)), vals); ax[1].set_xticks(range(len(vals))); ax[1].set_xticklabels(labs, fontsize=6)
+        ax[1].bar(range(len(vals)), vals); ax[1].set_xticks(range(len(vals)))
+        ax[1].set_xticklabels(labs, fontsize=7, rotation=30, ha="right")
         ax[1].set_ylabel("delay change [ns]"); ax[1].set_title("+/-20 % spike V.s jitter"); ax[1].grid()
         fig.tight_layout(); fig.savefig(os.path.join(PLOTS, "08_jitter_and_flux_swing.png"), dpi=110); plt.close(fig)
 

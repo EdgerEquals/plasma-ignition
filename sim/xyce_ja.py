@@ -3,7 +3,7 @@ Bias winding (N=1, ideal DC current source) resets the core before the shot; the
 import os, subprocess, json, numpy as np
 HERE = os.path.dirname(os.path.abspath(__file__))
 XY = os.path.join(HERE, "xyce", "install", "bin", "Xyce"); RD = os.path.join(HERE, "xyce", "runs")
-JA = dict(MS=7.2e5, A=4, K=3, C=0.05, ALPHA=3.5e-6)   # calibrated: Bs ~1.19 T (120 C), Hc ~2.5 A/m (FT-3M)
+JA = dict(MS=7.2e5, A=4, K=3, C=0.05, ALPHA=3.5e-6)   # mu0*Ms = 0.905 T; run B peaks near 0.95 T. Bs ~1.19 T would need Ms ~9.47e5, which this run did not use.
 TBD = 150e-6
 
 def run(R=1.0, C0b=62.5e-9, Hbias=-60.0, tq=None, trb=None, tag="ja", tend=12e-6):
