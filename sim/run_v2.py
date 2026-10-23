@@ -272,8 +272,8 @@ def item2(ck):
     return out
 
 # ====================================================================== ITEM 3: C_block recovery between shots
-# Realistic SR1/SR2: nanocrystalline (FT-3M class) tape cores, bias reset, eddy/viscous loss as SRiso (ke 4.5e-5);
-# turns chosen so the geometric saturated L stays well inside the doc's 81 uH / 3.2 uH transfer inductances.
+# Realistic SR1/SR2: nanocrystalline (FT-3M class) tape cores, bias reset, eddy/viscous loss as SRiso (ke 4.5e-5).
+# Lair is set equal to the document's 81 uH / 3.2 uH transfer inductances, not to a smaller geometric L inside that budget.
 SR1_CORE = dict(N=100, A=17e-3/(100*2.0), le=0.20, dB=2.0, Hc=2.5, ke=4.5e-5, mui=5e4, Lair=81e-6)
 SR2_CORE = dict(N=40, A=3.4e-3/(40*2.0), le=0.15, dB=2.0, Hc=2.5, ke=4.5e-5, mui=5e4, Lair=3.2e-6)
 
@@ -373,100 +373,107 @@ MIT_SHOW = [("none", "none", "k"), ("clamp_X10000", "clamp 10 kV (TVS)", "tab:or
             ("rclamp_X5000_Ron2", "diode to 5 kV reservoir rail", "tab:cyan"),
             ("crowbar_t_fire3e-06_Rd2", "timed crowbar 2R @ +3us", "tab:red")]
 
-def make_plots(ck):
+def make_plots(ck, only=None):
     os.makedirs(PLOTS, exist_ok=True)
     made = []
+    want = lambda n: only is None or n in only
     # ---------------- 09: quench mitigations
-    fig, ax = plt.subplots(1, 3, figsize=(17, 5.2))
-    for j, model in enumerate(("eddy", "ttu")):
+    if want(9):
+        fig, ax = plt.subplots(1, 3, figsize=(17, 5.2))
+        for j, model in enumerate(("eddy", "ttu")):
+            for pid, lab, c in MIT_SHOW:
+                tag = f"v2m_{model}_{pid}_q1_norb"; r = _dat(tag)
+                if r is None or tag not in ck or not ck[tag].get("ok"): continue
+                tb = ck[tag]["t_bd"]
+                ax[j].plot((r["time"]-tb)*1e6, r["v(P)"]/1e3, color=c, lw=1, label=lab)
+            ax[j].set_xlim(-0.2, 13); ax[j].set_ylim(-25, 40); ax[j].grid(alpha=.3)
+            ax[j].set_xlabel("time after breakdown [us]"); ax[j].set_ylabel("plug node V(P) [kV]")
+            ax[j].set_title(f"No re-break after quench at +1 us ({'eddy core (primary)' if model=='eddy' else 'TTU core'})")
+            ax[j].axhline(4, color="grey", ls=":", lw=.8)
+        ax[0].legend(fontsize=8, loc="upper right")
+        labs, vmax, deliv = [], [], []
         for pid, lab, c in MIT_SHOW:
-            tag = f"v2m_{model}_{pid}_q1_norb"; r = _dat(tag)
-            if r is None or tag not in ck or not ck[tag].get("ok"): continue
-            tb = ck[tag]["t_bd"]
-            ax[j].plot((r["time"]-tb)*1e6, r["v(P)"]/1e3, color=c, lw=1, label=lab)
-        ax[j].set_xlim(-0.2, 13); ax[j].set_ylim(-25, 40); ax[j].grid(alpha=.3)
-        ax[j].set_xlabel("time after breakdown [us]"); ax[j].set_ylabel("plug node V(P) [kV]")
-        ax[j].set_title(f"No re-break after quench at +1 us ({'eddy core (primary)' if model=='eddy' else 'TTU core'})")
-        ax[j].axhline(4, color="grey", ls=":", lw=.8)
-    ax[0].legend(fontsize=8, loc="upper right")
-    labs, vmax, deliv = [], [], []
-    for pid, lab, c in MIT_SHOW:
-        a1 = ck.get(f"v2m_eddy_{pid}_q1_norb", {}); a2 = ck.get(f"v2m_eddy_{pid}_normal", ck.get(f"v2m_eddy_none_normal", {}))
-        if not a1.get("ok"): continue
-        labs.append(lab.replace(" (TVS)", "").replace("across SRiso ", "")); vmax.append(a1["Vnode_max_after_quench"]/1e3)
-        deliv.append(100*a2.get("frac_first_half", np.nan) if a2.get("ok") else np.nan)
-    x = np.arange(len(labs))
-    ax[2].bar(x-0.2, vmax, 0.4, label="node max, no re-break [kV]", color="tab:red")
-    ax2 = ax[2].twinx(); ax2.bar(x+0.2, deliv, 0.4, label="normal-shot 1st half-cycle delivery [%]", color="tab:blue")
-    ax[2].set_xticks(x); ax[2].set_xticklabels(labs, rotation=35, ha="right", fontsize=8)
-    ax[2].set_ylabel("kV"); ax2.set_ylabel("%"); ax2.set_ylim(0, 100)
-    ax[2].set_title("Eddy model: node overvoltage vs normal delivery"); ax[2].legend(loc="upper left", fontsize=8); ax2.legend(loc="upper right", fontsize=8)
-    fig.tight_layout(); fn = os.path.join(PLOTS, "09_quench_mitigations.png"); fig.savefig(fn, dpi=130); plt.close(fig); made.append(fn)
+            a1 = ck.get(f"v2m_eddy_{pid}_q1_norb", {}); a2 = ck.get(f"v2m_eddy_{pid}_normal", ck.get(f"v2m_eddy_none_normal", {}))
+            if not a1.get("ok"): continue
+            labs.append(lab.replace(" (TVS)", "").replace("across SRiso ", "")); vmax.append(a1["Vnode_max_after_quench"]/1e3)
+            deliv.append(100*a2.get("frac_first_half", np.nan) if a2.get("ok") else np.nan)
+        x = np.arange(len(labs))
+        ax[2].bar(x-0.2, vmax, 0.4, label="node max, no re-break [kV]", color="tab:red")
+        ax2 = ax[2].twinx(); ax2.bar(x+0.2, deliv, 0.4, label="normal-shot 1st half-cycle delivery [%]", color="tab:blue")
+        ax[2].set_xticks(x); ax[2].set_xticklabels(labs, rotation=35, ha="right", fontsize=8)
+        ax[2].set_ylabel("kV"); ax2.set_ylabel("%"); ax2.set_ylim(0, 100)
+        ax[2].set_title("Eddy model: node overvoltage vs normal delivery"); ax[2].legend(loc="upper left", fontsize=8); ax2.legend(loc="upper right", fontsize=8)
+        fig.tight_layout(); fn = os.path.join(PLOTS, "09_quench_mitigations.png"); fig.savefig(fn, dpi=130); plt.close(fig); made.append(fn)
 
     # ---------------- 10: SR3 ferrite
-    F = [d for k, d in ck.items() if k.startswith("v2f2_") and d.get("ok")]
-    fig, ax = plt.subplots(1, 3, figsize=(17, 5.2))
-    sty = {"4B1": ("o", "tab:blue"), "4C65": ("s", "tab:green"), "CMD5005": ("^", "tab:red")}
-    for mat, (mk, c) in sty.items():
-        dd = [d for d in F if d["mat"] == mat and abs(d["Sw"]-SW_NOM) < 1e-9 and d["fvs"] == 1.0]
-        ax[0].scatter([d["Lsat_nH"] for d in dd], [-d["Vpk"]/1e3 for d in dd], marker=mk, color=c, label=f"{mat} (Sw 20 A.us/m)" + (" [25C only]" if mat == "CMD5005" else ""))
-        ax[1].scatter([d["Lsat_nH"] for d in dd], [d["edge5090"]*1e9 for d in dd], marker=mk, color=c)
-    for mu, c in ((1000.0, "tab:olive"), (2000.0, "tab:purple"), (5000.0, "tab:brown")):
-        for Sw, mk in ((5e-6, "P"), (10e-6, "X")):
-            dd = [d for d in F if d["mat"] == f"gen_mu{mu:g}" and abs(d["Sw"]-Sw) < 1e-9]
-            ax[0].scatter([d["Lsat_nH"] for d in dd], [-d["Vpk"]/1e3 for d in dd], marker=mk, color=c, label=f"hypothetical mu {mu:g}, Sw {Sw*1e6:g}")
+    if want(10):
+        F = [d for k, d in ck.items() if k.startswith("v2f2_") and d.get("ok")]
+        fig, ax = plt.subplots(1, 3, figsize=(17, 5.2))
+        sty = {"4B1": ("o", "tab:blue"), "4C65": ("s", "tab:green"), "CMD5005": ("^", "tab:red")}
+        for mat, (mk, c) in sty.items():
+            dd = [d for d in F if d["mat"] == mat and abs(d["Sw"]-SW_NOM) < 1e-9 and d["fvs"] == 1.0]
+            ax[0].scatter([d["Lsat_nH"] for d in dd], [-d["Vpk"]/1e3 for d in dd], marker=mk, color=c, label=f"{mat} (Sw 20 A.us/m)" + (" [25C only]" if mat == "CMD5005" else ""))
             ax[1].scatter([d["Lsat_nH"] for d in dd], [d["edge5090"]*1e9 for d in dd], marker=mk, color=c)
-    ax[0].axhline(55.9, color="k", ls="--", lw=.8); ax[0].text(5, 56.4, "ideal SR3 10 nH (v1 stage-1 block): 55.9 kV", fontsize=8)
-    ax[0].set_ylim(25, 58); ax[0].set_xlim(0, 240)
-    for k in (0, 1): ax[k].axvline(190, color="k", ls=":", lw=.8); ax[k].set_xlabel("SR3 saturated L (geometric + 5 nH lead) [nH]"); ax[k].grid(alpha=.3)
-    ax[0].set_ylabel("|plug peak| stage-1 block [kV]"); ax[0].set_title("SR3 as NiZn ferrite: plug peak vs Lsat"); ax[0].legend(fontsize=7, loc="lower right")
-    ax[1].set_ylabel("50-90 % edge [ns]"); ax[1].set_yscale("log"); ax[1].set_title("final edge (50-90 %); ideal 10 nH: ~0.5 ns")
-    for tag, lab, c in (("val_stage1", "ideal SR3 10 nH (v1)", "k"), ("val_stage1_190n", "ideal SR3 190 nH (v1)", "grey"),
-                        ("v2f2_4C65_N1_25x60_f1_Sw20", "4C65 1 turn 25/60 mm, 65 mm long", "tab:green"),
-                        ("v2f2_4C65_N12_25x80_f1_Sw20", "4C65 12 turns 25/80 mm, 3.4 mm", "tab:olive"),
-                        ("v2f2_CMD5005_N16_25x80_f1_Sw20", "CMD5005 16 turns (25C only)", "tab:red"),
-                        ("v2f2_gen_mu5000_N12_25x80_f1_Sw5", "hypothetical mu 5000, Sw 5, 12 turns", "tab:brown")):
-        r = _dat(tag)
-        if r is None: continue
-        ax[2].plot(r["time"]*1e9, r["v(P)"]/1e3, color=c, lw=1, label=lab)
-        ax[2].plot(r["time"]*1e9, r["v(n3)"]/1e3, color=c, lw=.6, ls=":")
-    ax[2].set_xlim(1150, 1450); ax[2].set_xlabel("time [ns]"); ax[2].set_ylabel("plug (solid) / C3 (dotted) [kV]")
-    ax[2].set_title("stage-1 block waveforms"); ax[2].legend(fontsize=7); ax[2].grid(alpha=.3)
-    fig.tight_layout(); fn = os.path.join(PLOTS, "10_sr3_ferrite.png"); fig.savefig(fn, dpi=130); plt.close(fig); made.append(fn)
+        for mu, c in ((1000.0, "tab:olive"), (2000.0, "tab:purple"), (5000.0, "tab:brown")):
+            for Sw, mk in ((5e-6, "P"), (10e-6, "X")):
+                dd = [d for d in F if d["mat"] == f"gen_mu{mu:g}" and abs(d["Sw"]-Sw) < 1e-9]
+                ax[0].scatter([d["Lsat_nH"] for d in dd], [-d["Vpk"]/1e3 for d in dd], marker=mk, color=c, label=f"hypothetical mu {mu:g}, Sw {Sw*1e6:g}")
+                ax[1].scatter([d["Lsat_nH"] for d in dd], [d["edge5090"]*1e9 for d in dd], marker=mk, color=c)
+        ax[0].axhline(56.0, color="k", ls="--", lw=.8)
+        ax[0].text(8, 54.2, "ideal 10 nH absolute peak 56.0 kV\n(section 4 swing is 55.5 kV)", fontsize=7.5, va="top")
+        ax[0].set_ylim(25, 60); ax[0].set_xlim(0, 240)
+        for k in (0, 1): ax[k].axvline(190, color="k", ls=":", lw=.8); ax[k].set_xlabel("SR3 saturated L (geometric + 5 nH lead) [nH]"); ax[k].grid(alpha=.3)
+        ax[0].set_ylabel("|plug peak| stage-1 block [kV]"); ax[0].set_title("SR3 as NiZn ferrite: plug peak vs Lsat"); ax[0].legend(fontsize=7, loc="lower right")
+        ax[1].set_ylabel("50-90 % edge [ns]"); ax[1].set_yscale("log"); ax[1].set_title("final edge (50-90 %); ideal 10 nH rerun: 0.37 ns")
+        for tag, lab, c in (("val_stage1", "ideal SR3 10 nH (v1)", "k"), ("val_stage1_190n", "ideal SR3 190 nH (v1)", "grey"),
+                            ("v2f2_4C65_N1_25x60_f1_Sw20", "4C65 1 turn 25/60 mm, 65 mm long", "tab:green"),
+                            ("v2f2_4C65_N12_25x80_f1_Sw20", "4C65 12 turns 25/80 mm, 3.4 mm", "tab:olive"),
+                            ("v2f2_CMD5005_N16_25x80_f1_Sw20", "CMD5005 16 turns (25C only)", "tab:red"),
+                            ("v2f2_gen_mu5000_N12_25x80_f1_Sw5", "hypothetical mu 5000, Sw 5, 12 turns", "tab:brown")):
+            r = _dat(tag)
+            if r is None: continue
+            ax[2].plot(r["time"]*1e9, r["v(P)"]/1e3, color=c, lw=1, label=lab)
+            ax[2].plot(r["time"]*1e9, r["v(n3)"]/1e3, color=c, lw=.6, ls=":")
+        ax[2].set_xlim(1150, 1450); ax[2].set_xlabel("time [ns]"); ax[2].set_ylabel("plug (solid) / C3 (dotted) [kV]")
+        ax[2].set_title("stage-1 block waveforms"); ax[2].legend(fontsize=7); ax[2].grid(alpha=.3)
+        fig.tight_layout(); fn = os.path.join(PLOTS, "10_sr3_ferrite.png"); fig.savefig(fn, dpi=130); plt.close(fig); made.append(fn)
 
     # ---------------- 11: C_block shot-to-shot
-    C = {(d["cfg"], d["rate"]): d for k, d in ck.items() if k.startswith("v2c_") and d.get("ok")}
-    rates = [r[0] for r in RATES]
-    fig, ax = plt.subplots(2, len(rates), figsize=(20, 7.5), sharey="row")
-    cols = dict(lossless_xfmr="k", xfmr_Rc1M="tab:orange", xfmr_Rc200k="tab:olive", Rc1M_Rx1M="tab:purple",
-                Rc1M_Rx300k="tab:blue", Rc1M_Rx100k="tab:green", lossless_Rx100k="tab:cyan")
-    for j, rate in enumerate(rates):
-        for cfg, c in cols.items():
-            d = C.get((cfg, rate))
-            if not d: continue
-            sh = d["shots"]
-            v = [s["ic"]["V_Cblock"]/1e3 for s in sh] + [sh[-1]["next"]["V_Cblock"]/1e3]
-            ax[0, j].plot(range(1, len(v)+1), v, "o-", color=c, ms=3, lw=1, label=cfg)
-            ax[1, j].plot(range(1, len(sh)+1), [-s["Vnode_peak_nobd"]/1e3 for s in sh], "o-", color=c, ms=3, lw=1)
-        ax[0, j].set_title(rate.replace("_", " ")); ax[0, j].axhline(-4, color="grey", ls=":")
-        ax[1, j].set_xlabel("shot #"); ax[0, j].grid(alpha=.3); ax[1, j].grid(alpha=.3)
-    ax[0, 0].set_ylabel("C_block voltage at shot start [kV] (ideal -4)"); ax[1, 0].set_ylabel("|gap peak| (no breakdown) [kV]")
-    ax[0, 0].legend(fontsize=7); ax[1, 0].set_ylim(0, 50)
-    fig.suptitle("C_block recovery between shots (lossy SR1/SR2, ideal SR3, bias reset assumed complete)")
-    fig.tight_layout(); fn = os.path.join(PLOTS, "11_cblock_multishot.png"); fig.savefig(fn, dpi=130); plt.close(fig); made.append(fn)
+    if want(11):
+        C = {(d["cfg"], d["rate"]): d for k, d in ck.items() if k.startswith("v2c_") and d.get("ok")}
+        rates = [r[0] for r in RATES]
+        fig, ax = plt.subplots(2, len(rates), figsize=(20, 7.5), sharey="row")
+        cols = dict(lossless_xfmr="k", xfmr_Rc1M="tab:orange", xfmr_Rc200k="tab:olive", Rc1M_Rx1M="tab:purple",
+                    Rc1M_Rx300k="tab:blue", Rc1M_Rx100k="tab:green", lossless_Rx100k="tab:cyan")
+        for j, rate in enumerate(rates):
+            for cfg, c in cols.items():
+                d = C.get((cfg, rate))
+                if not d: continue
+                sh = d["shots"]
+                # Shot-start state only. The voltage after the last shot is not another shot.
+                v = [s["ic"]["V_Cblock"]/1e3 for s in sh]
+                ax[0, j].plot(range(1, len(sh)+1), v, "o-", color=c, ms=3, lw=1, label=cfg)
+                ax[1, j].plot(range(1, len(sh)+1), [s["Vnode_peak_nobd"]/1e3 for s in sh], "o-", color=c, ms=3, lw=1)
+            ax[0, j].set_title(rate.replace("_", " ")); ax[0, j].axhline(-4, color="grey", ls=":")
+            ax[1, j].set_xlabel("shot #"); ax[0, j].grid(alpha=.3); ax[1, j].grid(alpha=.3)
+        ax[0, 0].set_ylabel("C_block at shot start [kV] (ideal -4)"); ax[1, 0].set_ylabel("gap peak, no breakdown [kV]")
+        ax[0, 0].legend(fontsize=7); ax[1, 0].set_ylim(-50, 12); ax[1, 0].axhline(0, color="grey", ls=":", lw=.6)
+        fig.suptitle("C_block at the start of each shot (lossy SR1/SR2, ideal SR3, bias reset assumed complete)")
+        fig.tight_layout(); fn = os.path.join(PLOTS, "11_cblock_multishot.png"); fig.savefig(fn, dpi=130); plt.close(fig); made.append(fn)
 
     # ---------------- 12: recovery waveform example
-    fig, ax = plt.subplots(1, 2, figsize=(14, 4.5))
-    for cfg, c in (("lossless_xfmr", "k"), ("xfmr_Rc1M", "tab:orange"), ("Rc1M_Rx300k", "tab:blue"), ("lossless_Rx100k", "tab:cyan")):
-        r = _dat(f"v2c_{cfg}_150Hz_r0")
-        if r is None: continue
-        ax[0].plot(r["time"]*1e3, (r["v(x)"] - 4000)/1e3, color=c, lw=.7, label=cfg)
-        r = _dat(f"v2c_{cfg}_300Hz_burst_r0")
-        if r is not None: ax[1].plot(r["time"]*1e3, (r["v(x)"] - 4000)/1e3, color=c, lw=.7, label=cfg)
-    for k, tt in ((0, "after shot 1, 150 Hz (6.7 ms gap)"), (1, "after shot 1, 300 Hz burst (3.3 ms gap)")):
-        ax[k].axhline(-4, color="grey", ls=":"); ax[k].set_xlabel("time after shot [ms]"); ax[k].set_ylabel("V_Cblock [kV]")
-        ax[k].set_title("inter-shot recovery " + tt); ax[k].grid(alpha=.3); ax[k].legend(fontsize=8)
-    fig.tight_layout(); fn = os.path.join(PLOTS, "12_cblock_recovery_waveforms.png"); fig.savefig(fn, dpi=130); plt.close(fig); made.append(fn)
+    if want(12):
+        fig, ax = plt.subplots(1, 2, figsize=(14, 4.5))
+        for cfg, c in (("lossless_xfmr", "k"), ("xfmr_Rc1M", "tab:orange"), ("Rc1M_Rx300k", "tab:blue"), ("lossless_Rx100k", "tab:cyan")):
+            r = _dat(f"v2c_{cfg}_150Hz_r0")
+            if r is None: continue
+            ax[0].plot(r["time"]*1e3, (r["v(x)"] - 4000)/1e3, color=c, lw=.7, label=cfg)
+            r = _dat(f"v2c_{cfg}_300Hz_burst_r0")
+            if r is not None: ax[1].plot(r["time"]*1e3, (r["v(x)"] - 4000)/1e3, color=c, lw=.7, label=cfg)
+        for k, tt in ((0, "after shot 1, 150 Hz (6.7 ms gap)"), (1, "after shot 1, 300 Hz burst (3.3 ms gap)")):
+            ax[k].axhline(-4, color="grey", ls=":"); ax[k].set_xlabel("time after shot [ms]"); ax[k].set_ylabel("V_Cblock [kV]")
+            ax[k].set_title("inter-shot recovery " + tt); ax[k].grid(alpha=.3); ax[k].legend(fontsize=8)
+        fig.tight_layout(); fn = os.path.join(PLOTS, "12_cblock_recovery_waveforms.png"); fig.savefig(fn, dpi=130); plt.close(fig); made.append(fn)
     return made
 
 def make_tables(ck):
