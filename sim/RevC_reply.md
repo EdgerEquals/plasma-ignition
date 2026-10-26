@@ -1,7 +1,5 @@
 # Rev C reply
 
-Working document. Not for external distribution.
-
 ## Voice channel
 
 **a)** No. This session cannot join the Plasma Ignition Bot call or push audio into it. The Voice connector only makes a speech file. It does not enter that call.
